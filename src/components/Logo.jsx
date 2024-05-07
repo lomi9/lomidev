@@ -1,4 +1,3 @@
-// Logo.js
 import React from 'react';
 
 const Logo = ({ color, size }) => {
@@ -6,7 +5,7 @@ const Logo = ({ color, size }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 500 500"
-      className={`h-${size} w-${size} ${color}`} // Tailwind CSS classes pour définir la taille et la couleur du logo
+      className={`h-${size} w-${size} ${color} z-[100] relative`} // Tailwind CSS classes pour définir la taille et la couleur du logo
       fill="none"
       stroke="currentColor"
     >
