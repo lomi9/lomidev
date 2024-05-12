@@ -5,6 +5,7 @@ import { useState } from "react";
 import NavLink from "./NavLink";
 import Switch from "./ui/Switch";
 import { useTheme } from '../contexts/ThemeContext';
+import {motion} from "framer-motion";
 
 
 const links = [
@@ -18,6 +19,59 @@ const Navbar = () => {
 
     const [open, setOpen] = useState(false);
     const { theme, toggleTheme } = useTheme();
+
+    const topVariants={
+        closed:{
+            rotate:0,
+        },
+        opened:{
+            rotate:45,
+            backgroundColor:"rgb(255,255,255)",
+        }
+    }
+
+    const centerVariants={
+        closed:{
+            opacity:1,
+        },
+        opened:{
+            opacity:0,
+        }
+    }
+
+    const bottomVariants={
+        closed:{
+            rotate:0,
+        },
+        opened:{
+            rotate:-45,
+            backgroundColor:"rgb(255,255,255)"
+        }
+    }
+
+    const listVariants = {
+        closed:{
+            x:"100vw",
+        },
+        opened:{
+            x: 0,
+            transition:{
+                when: "beforeChildren",
+                staggerChildren: 0.2,
+            }
+        }
+    }
+
+    const listItemVariants = {
+        closed:{
+            x: -10,
+            opacity:0,
+        },
+        opened:{
+            x: 0,
+            opacity: 1,
+        }
+    }
 
     return (
         <div className="fixed w-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-18 text-xl">
@@ -54,19 +108,32 @@ const Navbar = () => {
             <div className="md:hidden">
                 {/* MENU BUTTON */}
                 <button onClick={(()=>setOpen(!open))} className="w-10 h-8 flex flex-col justify-between z-50 relative">
-                    <div className="w-10  h-1 bg-black rounded"></div>
-                    <div className="w-10  h-1 bg-black rounded"></div>
-                    <div className="w-10  h-1 bg-black rounded"></div>
+                    <motion.div variants={topVariants} animate={open ? "opened" : "closed"} className="w-10  h-1 bg-black rounded origin-left"></motion.div>
+                    <motion.div variants={centerVariants} animate={open ? "opened" : "closed"} className="w-10  h-1 bg-black rounded"></motion.div>
+                    <motion.div variants={bottomVariants} animate={open ? "opened" : "closed"} className="w-10  h-1 bg-black rounded origin-left"></motion.div>
                 </button>
                 {/* MENU LIST */}
                 {open && (
-                    <div className="bg-black text-white absolute top-0 left-0 w-screen h-screen flex flex-col items-center justify-center gap-8 text-4xl ">
+                    <motion.div
+                    variants={listVariants}
+                    initial="closed"
+                    animate="opened"
+                    className="bg-black opacity-60 text-white absolute top-0 left-0 w-screen h-screen flex flex-col items-center justify-center gap-8 text-4xl ">
                         
                         {links.map(link=>(
-                            <Link href={link.url} key={link.title}>{link.title}</Link>
+                            <motion.div variants={listItemVariants} className="" key={link.title}>
+                                <Link href={link.url}>{link.title}</Link>
+                            </motion.div>
                             )
                         )}
-                    </div>
+                        <div className="flex items-center justify-end">
+                <Switch 
+                    checked={theme === 'dark'}
+                    onChange={toggleTheme}>
+                    {theme === 'dark' ? 'Dark' : 'Light'}
+                </Switch>
+            </div>
+                    </motion.div>
                 )}
 
             </div>

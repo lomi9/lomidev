@@ -5,8 +5,8 @@ import NeatBackground from "@/components/NeatBackground";
 import { Kanit, Syne } from "next/font/google";
 
 export const metadata = {
-  title: "LoMi Dev",
-  description: "Dévelloppeuse web - Création de site web",
+  title: "Lomi dev",
+  description: "Développeuse web - Création de site web",
 };
 
 const kanit = Kanit({
@@ -17,6 +17,7 @@ const kanit = Kanit({
 });
 
 const syne = Syne({
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -25,15 +26,15 @@ export default function RootLayout({ children }) {
   return (
     <ThemeProvider>
       <html lang="fr" className={syne.className}>
-        <body>
+        <body className="">
           <div className="z-5 w-full h-screen fixed top-0 left-0 overflow-hidden">
             <NeatBackground />
           </div>
           <div className="relative w-full bg-gradient-to-b from-transparent to-transparent z-10">
-            <div className="w-full pt-4 z-[100] relative">
+            <div className="w-full z-[100] relative">
               <Navbar />
             </div>
-            <div className="w-full">{children}</div>
+            <div className="w-full scroll-container">{children}</div>
           </div>
         </body>
       </html>

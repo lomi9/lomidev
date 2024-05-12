@@ -99,3 +99,16 @@ body {
     );
   background-blend-mode: multiply;
 }
+
+/* **** SCROLL SNAPPING EFFECT **** */
+
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.scroll-section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
