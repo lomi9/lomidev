@@ -31,7 +31,7 @@ const Services = () => {
                 </div>
             <p>Développeuse web indépendante, je privilégie le côté humain pour que votre site web reflète votre image.</p>
             <p>Je construit et optimise votre site web de A à Z selon vos besoins. À la livraison de votre site web, vous êtes entièrement propriétaire de celui-ci. </p>
-            <p>Et après ? je maintien le bon fonctionnement et la sécurité de votre site web, et si besoin, j'ajoute du contenu régulièrement. Je suis également disponible afin d'étoffer vos réseaux sociaux.</p>
+            <p>Et après ? je maintien le bon fonctionnement et la sécurité de votre site web, et si besoin, j&apos;ajoute du contenu régulièrement. Je suis également disponible afin d&apos;étoffer vos réseaux sociaux.</p>
     
     </div>
     )

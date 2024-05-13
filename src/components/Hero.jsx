@@ -14,29 +14,24 @@ const Hero = () => {
         <>
         <div className="hero-grid w-screen h-screen">
 
-          <div className="grid grid-cols-4 xl:grid-cols-5 grid-rows-3 gap-8 border border-solid border-transparent">
+          <div className="grid grid-cols-4 xl:grid-cols-5 grid-rows-3 gap-2 sm:gap-4 lg:gap-8 border border-solid border-transparent">
             <div className="flex div1 col-start-1 col-end-5 row-start-1 row-end-3">
               <HeroVideo/>
             </div>
 
-            <div className={`div2 flex col-start-1 col-end-3 row-start-3 row-end-4 items-center justify-between bg-opacity-30 border border-cardbordercolor rounded-3xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
+            <div className={`div2 h-[25vh] p-2 sm:p-8 lg:p-0 lg:h-auto flex flex-wrap lg:flex-nowrap col-start-1 col-end-5 sm:col-end-3 row-start-3 items-center sm:content-between lg:content-normal lg:justify-between bg-opacity-30 border border-cardbordercolor rounded-3xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
               
               <div>
-                <p className="font-bold p-2 pl-8" >Obtenez un devis gratuit !</p>
-                <p className="font-thin pt-2 pl-8"> Présentez-moi votre projet via ce petit questionnaire :</p>
+                <p className="font-bold text-sm sm:text-lg lg:p-2 lg:pl-8" >Obtenez un devis gratuit !</p>
+                <p className="font-thin text-sm sm:text-lg lg:pt-2 lg:pl-8"> Présentez-moi votre projet via ce petit questionnaire :</p>
               </div>
-              <div className="flex h-full p-8 justify-end items-end">
+              <div className="flex w-full sm:w-auto lg:h-full lg:p-8 justify-center sm:justify-end items-end">
 
-<a
-  className="group min-w-[140px] inline-block rounded-full bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
-  href="#"
->
-  <span
-    className="flex rounded-full bg-btnbackground px-4 py-2 text-sm font-medium group-hover:bg-transparent items-center justify-between"
-  >
-    C&apos;est parti ! <ArrowUpRight className="w-[20%]"/>
-  </span>
-</a>
+                  <a className="group min-w-[140px] inline-block rounded-full bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75" href="#">
+                    <span className="flex text-sm rounded-full bg-btnbackground px-4 py-2 font-medium group-hover:bg-transparent items-center justify-between">
+                      C&apos;est parti ! <ArrowUpRight className="w-[20%]"/>
+                    </span>
+                  </a>
               </div>
               </div>
 
