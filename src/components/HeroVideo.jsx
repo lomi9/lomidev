@@ -29,11 +29,11 @@ const HeroVideo = () => {
             <div className={` filter absolute top-0 left-0 w-full h-full ${theme === 'dark' ? 'bg-white opacity-[20%]' : 'bg-white opacity-[55%]'}`}>
                
             </div>
-            <div className='title absolute top-0 left-0 w-full h-full flex justify-start sm:justify-center items-start pl-2 sm:pl-6 flew-wrap flex-col translate-y-[10%]'>
-                <h1 className=' text-3xl sm:text-5xl font-kanit font-bold pt-4 sm:pt-0 pb-2 sm:pb-8 bg-[#F0EFEC] bg-clip-text text-transparent'>Développeuse web</h1>
+            <div className='title absolute top-0 left-0 w-full h-full flex justify-start sm:justify-center items-start pl-2 sm:pl-6 flew-wrap flex-col'>
+                <h1 className=' text-3xl sm:text-5xl font-kanit font-bold pt-4 sm:pt-0 pb-2 sm:pb-8 bg-[#535B59] bg-clip-text text-transparent'>Développeuse web</h1>
                 <div className='flex items-center'>
-                <ChevronRight className='text-gray-800 text-xl sm:text-2xl font-syne font-[200]'/>
-                <h2 className='text-gray-800 text-lg sm:text-2xl font-syne font-[200]'>Création de sites web sur mesure </h2>
+                <ChevronRight className='text-[#535B59] text-xl sm:text-2xl font-syne font-[200]'/>
+                <h2 className='text-[#535B59] text-lg sm:text-2xl font-kanit font-[00]'>Création de sites web sur mesure </h2>
                 </div>
             </div>
         </div>

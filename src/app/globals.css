@@ -100,7 +100,7 @@ body {
   background-blend-mode: multiply;
 }
 
-/* **** SCROLL SNAPPING EFFECT **** */
+/* **** SCROLL SNAPPING EFFECT
 
 .scroll-container {
   scroll-snap-type: y mandatory;
@@ -112,3 +112,5 @@ body {
   scroll-snap-align: start;
   height: 100vh;
 }
+
+ **** */
