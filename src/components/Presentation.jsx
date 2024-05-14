@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import {motion, useScroll, useTransform} from "framer-motion";
 import { useTheme } from "@/contexts/ThemeContext";
 import HomeTag from "./ui/HomeTag";
@@ -53,12 +53,6 @@ const Presentation = () => {
     const {scrollYProgress} = useScroll({target:ref});
     const x = useTransform(scrollYProgress, [0,1], ["-25%","-75%"]);
 
-    const tags = {
-        tags: [
-            { title : 'Webdesign', text: 'Référencement sur les moteurs de recherche'},
-            { title : 'Unique', text: 'Respect des legilations en vigueur'},
-        ]
-    }
 
     return (
         <div ref={ref} className=" h-[600vh] bg-transparent">
