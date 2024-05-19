@@ -67,7 +67,7 @@ const Presentation = () => {
                         <div className=" px-4 md:px-12 lg:px-18 h-full w-full flex items-center justify-center">
                             <div className={` border-card-container flex flex-wrap w-full h-[75vh] bg-opacity-30 border border-cardbordercolor rounded-3xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
                                 <div className="content-container relative w-full h-full flex flex-wrap justify-start items-center content-between md:content-around px-8 pb-8 overflow-hidden rounded-3xl">
-                                    <div className="image-container absolute top-[-10%] right-[-10%] md:right-[-5%] flex justify-end h-[45%] sm:h-[55%] md:h-[60%] lg:h-[66%] rounded-3xl">
+                                    <div className="image-container absolute top-[-6%] right-[-20%] md:right-[-5%] flex justify-end h-[45%] sm:h-[55%] md:h-[60%] lg:h-[66%] rounded-3xl">
                                         <Image src={item.img} width={400} height={400} className=" object-contain" alt={item.alt}></Image>
                                     </div>
                                     <div className="w-[60%] min-h-[35%] sm:min-h-[45%] md:min-h-[30%] lg:min-h-[20%] flex flex-wrap items-center">

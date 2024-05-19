@@ -31,6 +31,7 @@ module.exports = {
         cardbordercolor: "hsl(var(--cardbordercolor))",
         darkercolor: "hsl(var(--darkercolor))",
         cardradialgradientbg: "hsl(var(--cardradialgradientbg))",
+        tags: "hsl(var(--tags))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
