@@ -11,7 +11,7 @@ const PricesPage = () => {
     
     return (
         <div className="w-screen flex justify-center items-center px-4 md:px-12 lg:px-18 pt-[6rem]">
-            <div className={`flex w-full justify-center items-center bg-opacity-40 border border-gray-200 border-opacity-30 rounded-xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
+            <div className={`flex w-full justify-center items-center bg-opacity-0 border border-transparent border-opacity-00 rounded-xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-transparent' : 'bg-transparent'}`}>
                 <PricingTabs/>
             </div>
         </div>

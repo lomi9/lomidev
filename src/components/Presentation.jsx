@@ -1,7 +1,5 @@
 "use client"
 
-import { useRef, useEffect } from "react";
-import {motion, useScroll, useTransform} from "framer-motion";
 import { useTheme } from "@/contexts/ThemeContext";
 import HomeTag from "./ui/HomeTag";
 import Image from "next/image";
@@ -49,21 +47,13 @@ const items = [
 const Presentation = () => {
 
     const { theme } = useTheme();
-    const ref = useRef();
-    const {scrollYProgress} = useScroll({target:ref});
-    const x = useTransform(scrollYProgress, [0,1], ["-25%","-75%"]);
 
 
     return (
-        <div ref={ref} className=" h-[600vh] bg-transparent">
-            <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-
-                <motion.div style={{ x }} className="flex">
-                    <div className=" px-4 h-screen w-screen flex items-center justify-center">
+        <div className="snap-presentation-container bg-transparent flex flex-wrap w-screen h-screen">
                    
-                    </div>
                 {items.map((item) => (
-                    <div className=" horizontal-scroll-container h-screen  w-screen flex items-center justify-center" key={item.id}>
+                    <div className="snap-presentation-item h-screen  w-screen flex items-center justify-center" key={item.id}>
                         <div className=" px-4 md:px-12 lg:px-18 h-full w-full flex items-center justify-center">
                             <div className={` border-card-container flex flex-wrap w-full h-[75vh] bg-opacity-30 border border-cardbordercolor rounded-3xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
                                 <div className="content-container relative w-full h-full flex flex-wrap justify-start items-center content-between md:content-around px-8 pb-8 overflow-hidden rounded-3xl">
@@ -86,8 +76,6 @@ const Presentation = () => {
                         </div>
                     </div>
                 ))}
-                </motion.div>
-            </div>
         </div>
     );
 };

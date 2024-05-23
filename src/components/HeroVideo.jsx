@@ -2,31 +2,32 @@
 import { useEffect, useState } from "react";
 import { useTheme } from '../contexts/ThemeContext';
 import Image from "next/image";
-import illustration from "../assets/ilustration_n_et_b.webp";
 import { ChevronRight } from 'lucide-react';
 
 
 const HeroVideo = () => {
-    const heroVideoSource = "/hero_video.webm";
-    const image = illustration;
+    const lightVideoSource = "/hero_video.mp4";
+    const darkVideoSource = "/dark_space.mp4";
     const { theme } = useTheme();
 
     const [imageSource, setImageSource] = useState('/illustration_ia_colore_light.webp');
+    const [videoSource, setVideoSource] = useState(lightVideoSource);
 
     useEffect(() => {
         setImageSource(theme === 'light' ? '/illustration_ia_colore_light.webp' : '/ilustration_n_et_b.webp');
+        setVideoSource(theme === 'light' ? lightVideoSource : darkVideoSource);
     }, [theme]);
 
 
     return (
         <div className='relative w-full h-full overflow-visible'>
         <div className="heroVideoContainer relative w-full h-[40vh] sm:h-[50vh] overflow-hidden rounded-3xl shadow-lg border border-solid border-danger">
-            <video key={heroVideoSource} autoPlay loop muted playsInline className="heroVideo w-full h-full object-cover">
-                <source src={heroVideoSource} type="video/webm" />
+            <video key={videoSource} autoPlay loop muted playsInline className="heroVideo w-full h-full object-cover">
+                <source src={videoSource} type="video/mp4" />
                 Votre navigateur ne supporte pas les vidéos.
             </video>
             
-            <div className={` filter absolute top-0 left-0 w-full h-full ${theme === 'dark' ? 'bg-white opacity-[20%]' : 'bg-white opacity-[55%]'}`}>
+            <div className={` filter absolute top-0 left-0 w-full h-full ${theme === 'dark' ? 'bg-black opacity-[20%]' : 'bg-white opacity-[55%]'}`}>
                
             </div>
             <div className='title absolute top-0 left-0 w-full h-full flex justify-start sm:justify-center items-start pl-2 sm:pl-6 flew-wrap flex-col'>

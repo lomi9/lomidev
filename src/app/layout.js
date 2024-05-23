@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "../../src/contexts/ThemeContext";
 import NeatBackground from "@/components/NeatBackground";
 import { Kanit, Syne } from "next/font/google";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Lomi dev",
@@ -25,7 +26,7 @@ const syne = Syne({
 export default function RootLayout({ children }) {
   return (
     <ThemeProvider>
-      <html lang="fr" className={syne.className}>
+      <html lang="fr" className={`${syne.className} ${kanit.className}`}>
         <body className="">
           <div className="z-5 w-full h-screen fixed top-0 left-0 overflow-hidden">
             <NeatBackground />
@@ -35,6 +36,9 @@ export default function RootLayout({ children }) {
               <Navbar />
             </div>
             <div className="w-full scroll-container">{children}</div>
+            <div className="w-full">
+              <Footer />
+            </div>
           </div>
         </body>
       </html>

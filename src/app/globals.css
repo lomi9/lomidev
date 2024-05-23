@@ -36,7 +36,7 @@
     --border: 39, 31%, 82%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-    --tags: 22, 71%, 40%;
+    --tags: 337, 90%, 23%;
 
     --radius: 0.5rem;
   }
@@ -100,6 +100,47 @@ body {
       transparent 18px
     );
   background-blend-mode: multiply;
+}
+
+.snap-page-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.snap-page-item {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.snap-presentation-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.snap-presentation-item {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.icon-small {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  max-height: 16px;
+}
+
+.icon-medium {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-large {
+  width: 32px;
+  height: 32px;
 }
 
 /* **** SCROLL SNAPPING EFFECT

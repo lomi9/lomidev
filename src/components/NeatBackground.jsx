@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useTheme } from "../contexts/ThemeContext";
-import { NeatConfig, NeatGradient } from "@firecms/neat";
+import { NeatGradient } from "@firecms/neat";
 
 
 const NeatBackground = () => {
@@ -14,19 +14,19 @@ const NeatBackground = () => {
         const configDark = {
             "colors": [
                 {
-                    "color": "#040001",
+                    "color": "#040404",
                     "enabled": true
                 },
                 {
-                    "color": "#143D2C",
+                    "color": "#070718",
                     "enabled": true
                 },
                 {
-                    "color": "#254B50",
+                    "color": "#051414",
                     "enabled": true
                 },
                 {
-                    "color": "#000000",
+                    "color": "#080F1E",
                     "enabled": true
                 },
                 {
@@ -34,7 +34,7 @@ const NeatBackground = () => {
                     "enabled": false
                 }
             ],
-            "speed": 1,
+            "speed": 2,
             "horizontalPressure": 4,
             "verticalPressure": 5,
             "waveFrequencyX": 2,
