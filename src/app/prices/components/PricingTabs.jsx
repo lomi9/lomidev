@@ -25,7 +25,7 @@ export default function PricingTabs() {
   };
 
   return (
-    <div className='bg-transparent w-full max-w-[1200px]'>
+    <div className='bg-transparent w-full max-w-[1200px] pb-10'>
       {/* Accordéon mobile */}
       <div className="sm:hidden bg-transparent w-full sticky top-0 z-10">
         {tabs.map((tab) => (
