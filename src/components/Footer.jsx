@@ -1,4 +1,4 @@
-import { BadgeCheck, Dot, Facebook, Mail, Minus, Phone } from "lucide-react";
+import { BadgeCheck, Mail, Phone } from "lucide-react";
 import facebookIcon from "../../public/facebook_icon.png";
 import Image from "next/image";
 
@@ -23,7 +23,7 @@ const Footer = () => {
                     <div className=" w-full container flex justify-center flex-wrap mx-auto text-center">
                         <div className="flex mb-4 sm:mb-10 flex-wrap items-center bg-secondary/40 rounded-lg border-gray-200 px-4 py-2">
                             <BadgeCheck className=" w-[1rem] text-green-300"/>
-                            <p className="font-kanit text-xs pl-2"> Délai actuel de prise en charge d'un projet : 2 semaines </p>
+                            <p className="font-kanit text-xs pl-2"> Délai actuel de prise en charge d&#39;un projet : 2 semaines </p>
                         </div>
                             <div className="w-full flex justify-center items-center space-x-6">
                                 <a href="#" className="hover:text-gray-400 flex flex-wrap justify-center items-center"><Image src={facebook} width={30} height={30} alt="facebook icon" /> </a>
