@@ -9,10 +9,10 @@ import MonthlyServices from './MonthlyServices';
 import { CircleArrowRight } from 'lucide-react';
 
 const tabs = [
-  { name: 'Site vitrine Basique', component: <BasicOffer/> },
-  { name: 'Site vitrine Premium', component: <PremiumOffer/> },
-  { name: 'E-commerce & Solutions Personnalisées', component: <CustomSolutions/> },
-  { name: 'Services Mensuels', component: <MonthlyServices/> }
+  { name: 'Site vitrine Basique', component: <BasicOffer /> },
+  { name: 'Site vitrine Premium', component: <PremiumOffer /> },
+  { name: 'E-commerce & Solutions Personnalisées', component: <CustomSolutions /> },
+  { name: 'Services Mensuels', component: <MonthlyServices /> }
 ];
 
 export default function PricingTabs() {
@@ -27,18 +27,18 @@ export default function PricingTabs() {
   return (
     <div className='bg-transparent w-full max-w-[1200px]'>
       {/* Accordéon mobile */}
-      <div className="sm:hidden bg-transparent w-full">
+      <div className="sm:hidden bg-transparent w-full sticky top-0 z-10">
         {tabs.map((tab) => (
           <div key={tab.name} className='bg-transparent w-full my-4'>
-            <div 
+            <div
               onClick={() => toggleAccordion(tab.name)}
-              className={`button flex justify-between w-full text-left p-4 text-sm font-medium text-gray-500 hover:bg-cardbordercolor focus:outline-none focus:bg-gray-200  focus:bg-opacity-30 bg-opacity-30 border border-gray-200 border-opacity-70 rounded-[40px] backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}
+              className={`button flex justify-between w-full text-left p-4 text-sm font-medium text-gray-500 hover:bg-cardbordercolor focus:outline-none focus:bg-gray-200 focus:bg-opacity-30 bg-opacity-30 border border-gray-200 border-opacity-70 rounded-[40px] backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}
             >
               {tab.name}
               <CircleArrowRight className={`text-tags transition-transform duration-300 ${openTab === tab.name ? 'transform rotate-90' : ''}`} />
             </div>
             {openTab === tab.name && (
-              <div className="accordion-content p-4 border-gray-200">
+              <div className="accordion-content p-4 border-gray-200 overflow-y-auto max-h-[calc(100vh-200px)]">
                 {tab.component}
               </div>
             )}
