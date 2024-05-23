@@ -14,9 +14,9 @@ export default function BasicOffer() {
         <p className="pb-6 text-sm">Idéal si vous débutez une activité, si vous souhaitez gérer vous-même votre site web, ou en cas de budget serré. </p>
 
 
-        <div className="flex pb-6 flex-wrap w-full md:w-auto lg:h-full lg:p-8 justify-center sm:justify-end items-end">
+        <div className="flex pb-6 flex-wrap w-full lg:h-full lg:p-8 justify-center items-end">
             <p className="w-full flex justify-center text-xs pb-2"> à partir de : </p>
-            <div className="group min-w-[120px] inline-block rounded-full bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
+            <div className="group min-w-[120px] inline-block  justify-center rounded-full bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
                 <span className="flex text-sm rounded-full bg-btnbackground px-4 py-2 font-medium group-hover:bg-transparent items-center justify-center flex-wrap">
                     <p className="w-full flex justify-center text-lg"> 850€ </p>
                 </span>
@@ -55,20 +55,20 @@ export default function BasicOffer() {
 
             <ul>
 
-            <li className="w-full flex text-base gap-2 pb-4 items-center">
-                    <CirclePlus className="icon-small text-pink-300"/>
+            <li className="w-full flex text-base gap-2 pb-4 items-start">
+                    <CirclePlus className="icon-small text-pink-300 mt-[4px]"/>
                     <p className=" w-auto flex flex-wrap items-center justify-start">Création de logo + charte graphique</p>
                     </li>
-                <li className="w-full flex text-base gap-2 pb-4 items-center">
-                    <CirclePlus className="icon-small text-pink-300"/>
+                <li className="w-full flex text-base gap-2 pb-4 items-start">
+                    <CirclePlus className="icon-small text-pink-300 mt-[4px]"/>
                     <p className=" w-auto flex flex-wrap items-center justify-start">Rédaction du contenu</p>
                     </li>
-                    <li className="w-full flex text-base gap-2 pb-4 items-center">
-                    <CirclePlus className="icon-small text-pink-300"/>
-                    <p className=" w-auto flex flex-wrap items-center justify-start">Création de votre fiche d&aposétablissement Google</p>
+                    <li className="w-full flex text-base gap-2 pb-4 items-start">
+                    <CirclePlus className="icon-small text-pink-300 mt-[4px]"/>
+                    <p className=" w-auto flex flex-wrap items-center justify-start">Création de votre fiche d&#39;établissement Google</p>
                     </li>
-                    <li className="w-full flex text-base gap-2 pb-4 items-center">
-                    <CirclePlus className="icon-small text-pink-300"/>
+                    <li className="w-full flex text-base gap-2 pb-4 items-start">
+                    <CirclePlus className="icon-small text-pink-300 mt-[4px]"/>
                     <p className=" w-auto flex flex-wrap items-center justify-start">Création de comptes réseaux sociaux</p>
                     </li>
             </ul>
@@ -79,16 +79,16 @@ export default function BasicOffer() {
 
 <ul>
 
-<li className="w-full flex text-base gap-2 pb-4 items-center">
-        <SquareDashedBottomCode className="icon-small text-blue-300"/>
+<li className="w-full flex text-base gap-2 pb-4 items-start">
+        <SquareDashedBottomCode className="icon-small text-blue-300 mt-[4px]"/>
         <p className=" w-auto flex flex-wrap items-center justify-start">Votre site web est conçu avec Wordpress</p>
         </li>
-    <li className="w-full flex text-base gap-2 pb-4 items-center">
-        <SquareUserRound className="icon-small text-blue-300 "/>
+    <li className="w-full flex text-base gap-2 pb-4 items-start">
+        <SquareUserRound className="icon-small text-blue-300 mt-[4px]"/>
         <p className=" w-auto flex flex-wrap items-center justify-start">Vous êtes propriétaire de votre site web</p>
         </li>
-    <li className="w-full flex text-base gap-2 pb-4 items-center">
-        <Settings className="icon-small text-blue-300 "/>
+    <li className="w-full flex text-base gap-2 pb-4 items-start">
+        <Settings className="icon-small text-blue-300 mt-[4px]"/>
         <p className=" w-auto flex flex-wrap items-center justify-start">Possibilité de gérer vous-même votre site web après livraison</p>
         </li>
     <li className="w-full flex text-base gap-2 pb-4 items-center">

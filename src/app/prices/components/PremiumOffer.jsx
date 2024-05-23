@@ -14,7 +14,7 @@ export default function PremiumOffer() {
         <p className="pb-6 text-sm">Idéal pour vous démarquer de la concurrence, avec un site web moderne, attractif et très performant.</p>
 
 
-        <div className="flex pb-6 flex-wrap w-full md:w-auto lg:h-full lg:p-8 justify-center sm:justify-end items-end">
+        <div className="flex pb-6 flex-wrap w-full md:w-auto lg:h-full lg:p-8 justify-center items-end">
             <p className="w-full flex justify-center text-xs pb-2"> à partir de : </p>
             <div className="group min-w-[120px] inline-block rounded-full bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
                 <span className="flex text-sm rounded-full bg-btnbackground px-4 py-2 font-medium group-hover:bg-transparent items-center justify-center flex-wrap">
@@ -23,12 +23,12 @@ export default function PremiumOffer() {
             </div>
         </div>
 
-        <div className="w-full border border-solid rounded-sm p-4 shadow-inner-halo-valid">
+        <div className="border border-solid rounded-sm p-4 shadow-inner-halo-valid">
             <p className="text-base py-4 underline">Inclus : </p>
 
-            <ul className="w-full flex flex-wrap">
-                <li className="w-full flex text-base gap-2 pb-4 items-center">
-                    <CircleCheckBig className="flex icon-small text-green-400"/>
+            <ul className="">
+                <li className="w-full flex text-base gap-2 pb-4 items-start">
+                    <CircleCheckBig className="flex icon-small text-green-400 mt-[4px]"/>
                     <p className=" w-auto flex flex-wrap items-center justify-start"> Création du webdesign entièrement personnalisable selon vos souhaits </p>
                 </li>
                 <li className="w-full flex text-base gap-2 pb-4 items-center">
@@ -54,8 +54,8 @@ export default function PremiumOffer() {
 
             <ul>
 
-                <li className="w-full flex text-base gap-2 pb-4 items-center">
-                    <CirclePlus className="icon-small text-pink-300"/>
+                <li className="w-full flex text-base gap-2 pb-4 items-start">
+                    <CirclePlus className="icon-small text-pink-300 mt-[4px]"/>
                     <p className=" w-auto flex flex-wrap items-center justify-start">Création de logo + charte graphique</p>
                     </li>
                 <li className="w-full flex text-base gap-2 pb-4 items-center">
@@ -64,14 +64,14 @@ export default function PremiumOffer() {
                     </li>
                 <li className="w-full flex text-base gap-2 pb-4 items-center">
                     <CirclePlus className="icon-small text-pink-300"/>
-                    <p className=" w-auto flex flex-wrap items-center justify-start">Ajout d&aposanimations</p>
+                    <p className=" w-auto flex flex-wrap items-center justify-start">Ajout d&#39;animations</p>
                     </li>
-                    <li className="w-full flex text-base gap-2 pb-4 items-center">
-                    <CirclePlus className="icon-small text-pink-300"/>
-                    <p className=" w-auto flex flex-wrap items-center justify-start">Création de votre fiche d&aposétablissement Google</p>
+                    <li className="w-full flex text-base gap-2 pb-4 items-start">
+                    <CirclePlus className="icon-small text-pink-300 mt-[4px]"/>
+                    <p className=" w-auto flex flex-wrap items-center justify-start">Création de votre fiche d&#39;établissement Google</p>
                     </li>
-                    <li className="w-full flex text-base gap-2 pb-4 items-center">
-                    <CirclePlus className="icon-small text-pink-300"/>
+                    <li className="w-full flex text-base gap-2 pb-4 items-start">
+                    <CirclePlus className="icon-small text-pink-300 mt-[4px]"/>
                     <p className=" w-auto flex flex-wrap items-center justify-start">Création de comptes réseaux sociaux</p>
                     </li>
 
@@ -82,16 +82,16 @@ export default function PremiumOffer() {
         <p className="text-base py-4 underline"> Et, concrètement ? </p>
 
 <ul>
-    <li className="w-full flex text-base gap-2 pb-4 items-center">
-        <SquareDashedBottomCode className="icon-small text-blue-300"/>
+    <li className="w-full flex text-base gap-2 pb-4 items-start">
+        <SquareDashedBottomCode className="icon-small text-blue-300 mt-[4px]"/>
         <p className=" w-auto flex flex-wrap items-center justify-start">Votre site web est entièrement codé à la main</p>
         </li>
-    <li className="w-full flex text-base gap-2 pb-4 items-center">
-        <SquareUserRound className="icon-small text-blue-300 "/>
+    <li className="w-full flex text-base gap-2 pb-4 items-start">
+        <SquareUserRound className="icon-small text-blue-300 mt-[4px]"/>
         <p className=" w-auto flex flex-wrap items-center justify-start">Vous êtes propriétaire de votre site web</p>
         </li>
-    <li className="w-full flex text-base gap-2 pb-4 items-center">
-        <Paintbrush className="icon-small text-blue-300 "/>
+    <li className="w-full flex text-base gap-2 pb-4 items-start">
+        <Paintbrush className="icon-small text-blue-300 mt-[4px]"/>
         <p className=" w-auto flex flex-wrap items-center justify-start">Possibilité infinie de designs uniques</p>
         </li>
     <li className="w-full flex text-base gap-2 pb-4 items-center">

@@ -25,7 +25,7 @@ export default function PricingTabs() {
   };
 
   return (
-    <div className='bg-transparent w-full'>
+    <div className='bg-transparent w-full max-w-[1200px]'>
       {/* Accordéon mobile */}
       <div className="sm:hidden bg-transparent w-full">
         {tabs.map((tab) => (
@@ -48,15 +48,15 @@ export default function PricingTabs() {
 
       {/* Onglets pour les autres tailles d'écran */}
       <div className="hidden sm:flex flex-wrap justify-center items-center">
-        <div className="border-b border-gray-200">
+        <div className="border-b border-tagsborder">
           <ul className="-mb-px flex gap-6" aria-label="Tabs">
             {tabs.map((tab) => (
               <li key={tab.name} className="mr-2">
                 <p
-                  className={`inline-block p-4 rounded-t-lg ${
+                  className={`inline-block cursor-pointer p-4 rounded-t-lg ${
                     activeTab === tab.name
                       ? "shrink-0 border-b-2 border-tags px-1 pb-4 text-sm font-medium text-tags"
-                      : "text-gray-500 shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium hover:text-gray-700 hover:border-gray-300"
+                      : "text-gray-500 shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium hover:text-tagshover hover:border-gray-300"
                   }`}
                   onClick={() => setActiveTab(tab.name)}
                 >

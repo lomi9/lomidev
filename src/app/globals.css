@@ -37,6 +37,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     --tags: 337, 90%, 23%;
+    --tagsborder: 220, 13%, 91%;
+    --tagshover: 217, 19%, 27%;
 
     --radius: 0.5rem;
   }
@@ -45,7 +47,7 @@
     --background: 170 41% 3%;
     --foreground: 170 22% 100%;
 
-    --btnbackground: 180 70% 12%;
+    --btnbackground: 198, 82%, 11%;
     --cardbordercolor: 240 1% 10%;
     --cardradialgradientbg: 180 70% 26%;
     --darkercolor: 0 0% 0%;
@@ -62,12 +64,14 @@
     --primary-foreground: 170 91% 6%;
     --secondary: 170 19% 8%;
     --secondary-foreground: 170 19% 68%;
-    --accent: 170 28% 18%;
+    --accent: 199, 79%, 8%;
     --accent-foreground: 170 28% 78%;
     --destructive: 21 85% 60%;
     --destructive-foreground: 0 0% 0%;
     --ring: 170 91% 46%;
     --tags: 139, 69%, 80%;
+    --tagsborder: 220, 67%, 20%;
+    --tagshover: 220, 13%, 91%;
   }
 }
 

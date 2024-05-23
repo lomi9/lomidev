@@ -32,6 +32,8 @@ module.exports = {
         darkercolor: "hsl(var(--darkercolor))",
         cardradialgradientbg: "hsl(var(--cardradialgradientbg))",
         tags: "hsl(var(--tags))",
+        tagsborder: "hsl(var(--tagsborder))",
+        tagshover: "hsl(var(--tagshover))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
