@@ -50,10 +50,10 @@ const Presentation = () => {
 
 
     return (
-        <div className="snap-presentation-container bg-transparent flex flex-wrap w-screen h-screen">
+        <div className=" bg-transparent flex flex-wrap">
                    
                 {items.map((item) => (
-                    <div className="snap-presentation-item h-screen  w-screen flex items-center justify-center" key={item.id}>
+                    <div className=" flex items-center justify-center" key={item.id}>
                         <div className=" px-4 md:px-12 lg:px-18 h-full w-full flex items-center justify-center">
                             <div className={` border-card-container flex flex-wrap w-full h-[75vh] bg-opacity-30 border border-cardbordercolor rounded-3xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
                                 <div className="content-container relative w-full h-full flex flex-wrap justify-start items-center content-between md:content-around px-8 pb-8 overflow-hidden rounded-3xl">

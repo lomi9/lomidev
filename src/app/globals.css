@@ -106,28 +106,6 @@ body {
   background-blend-mode: multiply;
 }
 
-.snap-page-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-}
-
-.snap-page-item {
-  scroll-snap-align: start;
-  height: 100vh;
-}
-
-.snap-presentation-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-}
-
-.snap-presentation-item {
-  scroll-snap-align: start;
-  height: 100vh;
-}
-
 .icon-small {
   width: 16px;
   height: 16px;
