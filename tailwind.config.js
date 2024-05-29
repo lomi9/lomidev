@@ -23,6 +23,7 @@ module.exports = {
       fontFamily: {
         kanit: ["Kanit", "sans-serif"],
         syne: ["Syne", "sans-serif"],
+        roboto: ["Roboto_Condensed", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

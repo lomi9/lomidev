@@ -84,6 +84,19 @@
   }
 }
 
+/* globals.css */
+
+.font-syne {
+  font-family: "Syne", sans-serif;
+}
+
+.font-kanit {
+  font-family: "Kanit", sans-serif;
+}
+.font-roboto {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 body {
   margin: auto;
 }

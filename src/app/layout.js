@@ -2,7 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "../../src/contexts/ThemeContext";
 import NeatBackground from "@/components/NeatBackground";
-import { Kanit, Syne } from "next/font/google";
+import { Kanit, Syne, Roboto_Condensed } from "next/font/google";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -10,9 +10,16 @@ export const metadata = {
   description: "Développeuse web - Création de site web",
 };
 
+const roboto = Roboto_Condensed({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
 const kanit = Kanit({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
+  style: ["normal"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -26,7 +33,7 @@ const syne = Syne({
 export default function RootLayout({ children }) {
   return (
     <ThemeProvider>
-      <html lang="fr" className={`${syne.className} ${kanit.className}`}>
+      <html lang="fr" className={`${syne.className}`}>
         <body className="">
           <div className="z-5 w-full h-screen fixed top-0 left-0 overflow-hidden">
             <NeatBackground />
