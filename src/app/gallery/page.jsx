@@ -1,8 +1,12 @@
+import Projects from "./components/Projects";
+
 const GalleryPage = () => {
-    
+
     return (
-        <div>GalleryPage</div>
-    )
+        <div className="pt-20 w-full flex flex-wrap justify-center">
+            <Projects/>
+        </div>
+    );
 }
 
-export default GalleryPage
+export default GalleryPage;

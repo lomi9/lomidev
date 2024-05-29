@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      brightness: {
+        30: ".10",
+      },
       fontFamily: {
         kanit: ["Kanit", "sans-serif"],
         syne: ["Syne", "sans-serif"],
