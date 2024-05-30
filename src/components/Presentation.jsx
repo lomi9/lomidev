@@ -15,7 +15,7 @@ const items = [
         title : "Identité",
         tags: [
             { title : 'WebDesign', text: 'Conception personnalisée de votre site web'},
-            { title : 'Charte Graphique', text: 'Élaboration de votre image de marque, possibilité de création d\'un logo unique'},
+            { title : 'Charte Graphique', text: "Élaboration de votre image de marque, possibilité de création d'un logo unique"},
             { title : 'Veille concurentielle', text: 'Analyse de la concurrence pour vous démarquer'},
             { title : 'Contenu personnalisé', text: 'Rédaction de contenu reflètant votre image'},
 
@@ -32,13 +32,13 @@ const items = [
             { title : 'SEO', text: 'Référencement de votre site web sur les moteurs de recherche'},
             { title : 'RGPD', text: 'Conformité aux réglementations en vigueur'},
             { title : 'Performance', text: 'Optimisation de la vitesse de chargement'},
-            { title : 'Accessibilité', text: 'Assurance de l\'accessibilité pour tous les utilisateurs'},
+            { title : 'Accessibilité', text: "Assurance de l'accessibilité pour tous les utilisateurs"},
             { title : 'Responsive design', text: 'Site web adapté tous supports (ordinateur, tablette et mobile)'},
         ]
     },
     {
         id: 3,
-        text: "Et après ? Je maintiens le bon fonctionnement et la sécurité de votre site web, et si besoin, j\'ajoute du contenu régulièrement. Je suis également disponible afin d'étoffer vos réseaux sociaux.",
+        text: "Et après ? Je maintiens le bon fonctionnement et la sécurité de votre site web, et si besoin, j'ajoute du contenu régulièrement. Je suis également disponible afin d'étoffer vos réseaux sociaux.",
         img :  "/irridescent_process_3.png",
         alt : "Irridescent processus 3",
         number : "3",
@@ -47,7 +47,7 @@ const items = [
             { title : 'Outils de suivi', text: 'Analyse des performances et du trafic utilisateurs'},
             { title : 'Réseaux sociaux', text: 'Gestion de la promotion de votre site web et de votre activité'},
             { title : 'Sécurité', text: 'Surveillance et protection contre les menaces'},
-            { title : 'Assistance', text: 'Disponibilité continue en cas de besoin d\'assistance'},
+            { title : 'Assistance', text: "Disponibilité continue en cas de besoin d'assistance"},
             { title : 'Maintenance', text: 'Mises à jour et résolutions de bugs'},
         ]
     },
