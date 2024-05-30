@@ -44,7 +44,7 @@ const HeroParallax = ({ products }) => {
   return (
     <div
       ref={ref}
-      className=" h-[300vh] sm:h-[500vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className=" h-[250vh] sm:h-[500vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -56,30 +56,30 @@ const HeroParallax = ({ products }) => {
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 sm:space-x-10 md:space-x-20 mb-20">
-          {firstRow.map((product) => (
+        <motion.div className="flex flex-row-reverse space-x-reverse sm:space-x-reverse md:space-x-reverse space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
+        {firstRow.map((product, index) => (
             <ProductCard
               product={product}
               translate={translateX}
-              key={product.title}
+              key={`${product.title}-${index}`}
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row space-x-4 sm:space-x-10 md:space-x-20 mb-20">
-          {secondRow.map((product) => (
+        <motion.div className="flex flex-row space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
+        {secondRow.map((product, index) => (
             <ProductCard
               product={product}
               translate={translateXReverse}
-              key={product.title}
+              key={`${product.title}-${index}`}
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 sm:space-x-10 md:space-x-20">
-          {thirdRow.map((product) => (
+        <motion.div className="flex flex-row-reverse space-x-reverse sm:space-x-reverse md:space-x-reverse space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
+        {thirdRow.map((product, index) => (
             <ProductCard
               product={product}
               translate={translateX}
-              key={product.title}
+              key={`${product.title}-${index}`}
             />
           ))}
         </motion.div>
@@ -111,9 +111,9 @@ const ProductCard = ({ product, translate }) => {
         y: -20,
       }}
       key={product.title}
-      className="group/product h-48 w-48 sm:h-64 sm:w-64 md:h-96 md:w-[30rem] relative flex-shrink-0"
+      className="group/product h-80 w-[25rem] sm:h-96 sm:w-[30rem] relative flex-shrink-0"
     >
-      <Link href={product.link} className="block group-hover/product:shadow-2xl">
+      <div className="block group-hover/product:shadow-2xl">
         <Image
           src={product.thumbnail}
           height="600"
@@ -121,8 +121,8 @@ const ProductCard = ({ product, translate }) => {
           className="object-cover object-center-center absolute h-full w-full inset-0"
           alt={product.title}
         />
-      </Link>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
+      </div>
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-70 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
       </h2>

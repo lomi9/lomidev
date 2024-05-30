@@ -6,7 +6,7 @@ export default function ContactDetails() {
     return (
         <div className=" w-[25em] mx-0 md:mx-auto mt-10 py-6 lg:p-6 bg-background/30 rounded-lg shadow-md border border-solid border-cardbordercolor">
             <div className='flex flex-wrap items-center justify-start mb-6'>
-                <h2 className="flex w-full flex-wrap items-center justify-center md:text-xl lg:text-2xl font-bold text-gray-800">
+                <h2 className="flex w-full flex-wrap items-center justify-center md:text-xl lg:text-2xl font-bold text-foreground">
                     Demande de devis
                 </h2>
             </div>
