@@ -11,7 +11,7 @@ import {motion} from "framer-motion";
 const links = [
     { url: "/", title: "Home"},
     { url: "/prices", title: "Tarifs"},
-    { url: "/gallery", title: "Galerie"},
+    { url: "/projects", title: "Galerie"},
     { url: "/contact", title: "Contact"},
 ];
 

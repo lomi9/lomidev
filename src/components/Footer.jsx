@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="relative bg-transparent mt-12 overflow-y-hidden max-h-[200px] sm:max-h-[300px]">
           <div className="relative bg-transparent text-white overflow-hidden rounded-t-full h-[700px]">
                 {/* Halos de lumière */}
-                    <div className="absolute inset-0 flex justify-center">
+                    <div className="absolute inset-0 pt-[10px] sm:pt-[100px] flex justify-center">
                         <div className="absolute w-[8rem] h-[8rem] sm:w-[16rem] sm:h-[32rem] bg-gradient-to-r from-purple-400 to-blue-600 rounded-full opacity-50 filter blur-2xl sm:blur-3xl"></div>
                         <div className="absolute w-[10rem] h-[10rem] sm:w-[24rem] sm:h-[48rem] bg-gradient-to-r from-yellow-400 to-pink-600 rounded-full opacity-50 filter blur-xl sm:blur-3xl mt-10 sm:mt-24"></div>
                     </div>
