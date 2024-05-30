@@ -64,8 +64,11 @@ const Presentation = () => {
                    
                 {items.map((item) => (
                     <div className=" presentation-section-item h-full flex flex-1 items-center justify-center" key={item.id}>
+                       
                         <div className="h-full w-full flex items-center justify-center">
+                
                             <div className={` border-card-container flex flex-wrap h-full w-full bg-opacity-30 border border-cardbordercolor rounded-3xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
+
                                 <div className="content-container relative w-full h-full flex flex-wrap justify-start items-center pb-12 overflow-hidden rounded-3xl">
                                     <div className="image-container  w-[70%] absolute top-[-8%] right-[-13%] sm:top-[-10%] lg:top-[-7%] sm:right-[-15%] lg:right-[-13%] flex justify-end">
                                         <Image src={item.img} width={400} height={400} className=" object-contain" alt={item.alt}></Image>
@@ -87,7 +90,9 @@ const Presentation = () => {
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
+                        
                     </div>
                 ))}
         </div>
