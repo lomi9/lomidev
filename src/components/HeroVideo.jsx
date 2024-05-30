@@ -7,7 +7,7 @@ import { ChevronRight } from 'lucide-react';
 
 const HeroVideo = () => {
     const lightVideoSource = "/hero_video.mp4";
-    const darkVideoSource = "/dark_space.mp4";
+    const darkVideoSource = "/night_sky.mp4";
     const { theme } = useTheme();
 
     const [imageSource, setImageSource] = useState('/illustration_ia_colore_light.webp');
@@ -30,11 +30,11 @@ const HeroVideo = () => {
             <div className={` filter absolute top-0 left-0 w-full h-full ${theme === 'dark' ? 'bg-black opacity-[20%]' : 'bg-white opacity-[55%]'}`}>
                
             </div>
-            <div className='title absolute top-0 left-0 w-full h-full flex justify-start sm:justify-center items-start pl-2 sm:pl-6 flew-wrap flex-col'>
-                <h1 className=' text-3xl sm:text-5xl font-kanit font-bold pt-4 sm:pt-0 pb-2 sm:pb-8 bg-[#535B59] bg-clip-text text-transparent'>Développeuse web</h1>
+            <div className='title absolute top-0 left-0 w-full h-full flex justify-center items-start pl-2 sm:pl-6 flew-wrap flex-col'>
+                <h1 className=' text-3xl sm:text-5xl font-kanit font-bold pt-4 sm:pt-0 pb-2 sm:pb-8 bg-gradient-to-r from-green-100 via-orange-100 to-pink-100 p-[2px] bg-clip-text text-transparent'>Développeuse web</h1>
                 <div className='flex items-center'>
-                <ChevronRight className='text-[#535B59] text-xl sm:text-2xl font-syne font-[200]'/>
-                <h2 className='text-[#535B59] text-lg sm:text-2xl font-kanit font-[00]'>Création de sites web sur mesure </h2>
+                <ChevronRight className='text-foreground text-xl sm:text-2xl font-syne font-[200]'/>
+                <h2 className='text-cardbackground text-lg sm:text-2xl font-kanit font-[00]'>Création de sites web sur mesure </h2>
                 </div>
             </div>
         </div>
