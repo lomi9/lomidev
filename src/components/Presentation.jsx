@@ -60,29 +60,31 @@ const Presentation = () => {
 
 
     return (
-        <div className=" presentation-section bg-transparent flex flex-wrap w-full px-4 md:px-12 lg:px-18 gap-10">
+        <div className=" presentation-section bg-transparent flex flex-wrap flex-col lg:flex-row w-full px-4 sm:px-8 md:px-12 lg:px-18 gap-10">
                    
                 {items.map((item) => (
-                    <div className=" presentation-section-item flex flex-1 items-center justify-center" key={item.id}>
+                    <div className=" presentation-section-item h-full flex flex-1 items-center justify-center" key={item.id}>
                         <div className="h-full w-full flex items-center justify-center">
-                            <div className={` border-card-container flex flex-wrap w-full bg-opacity-30 border border-cardbordercolor rounded-3xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
+                            <div className={` border-card-container flex flex-wrap h-full w-full bg-opacity-30 border border-cardbordercolor rounded-3xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
                                 <div className="content-container relative w-full h-full flex flex-wrap justify-start items-center pb-12 overflow-hidden rounded-3xl">
-                                    <div className="image-container  w-[70%] absolute top-[-10%] right-[-15%] flex justify-end">
+                                    <div className="image-container  w-[70%] absolute top-[-10%] lg:top-[-7%] right-[-15%] lg:right-[-13%] flex justify-end">
                                         <Image src={item.img} width={400} height={400} className=" object-contain" alt={item.alt}></Image>
                                     </div>
-                                    <div className="w-[55%] min-h-[15em] flex flex-wrap items-center justify-center">
+                                    <div className="w-[55%] min-h-[55vw] md:min-h-[35vw] lg:min-h-[17vw] flex flex-wrap items-center justify-center">
                                         <p className=" hidden w-full justify-center text-6xl items-center">{item.number}.</p>
-                                        <p className="flex flex-wrap flex-col w-auto justify-center text-xl font-bold items-center">{item.title}
+                                        <p className="flex text-[5vw] md:text-[4vw] lg:text-[1.5vw] flex-wrap flex-col w-auto justify-center font-bold items-center">{item.title}
                                         <span className="flex w-[60%] bg-gradient-to-r from-green-100 via-orange-200 to-pink-200 h-[2px] rounded-3xl"></span></p>
                                     </div>
-                                    <div className="w-full px-8 pt-4 pb-16 flex flex-wrap items-center">
-                                        <p className="text-base font-thin">{item.text}</p>
+                                    <div className="w-full px-8 min-h-[45vw] md:min-h-[20vw] lg:min-h-[14vw] flex flex-wrap items-start">
+                                        <p className="text-[4.5vw] md:text-[3vw] lg:text-[1.3vw] font-thin">{item.text}</p>
                                     </div>
-                                    <div className="px-8 pb-12 w-[100%] flex flex-wrap gap-4 justify-evenly">
+                                    <div className="w-[100%] flex flex-wrap justify-center items-start">
+                                        <div className="px-2 md:px-8 sm:max-w-[85%] lg:max-w-[100%] pt-6 pb-12 lg:pt-0 lg:pb-4 w-[100%] flex flex-wrap gap-4 justify-evenly items-start">
                                                 {item.tags.map((tag, index) => (
                                                     <HomeTag key={index} title={tag.title} text={tag.text} />
                                                 ))}
-                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

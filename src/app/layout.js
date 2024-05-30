@@ -42,7 +42,9 @@ export default function RootLayout({ children }) {
             <div className="w-full z-[100] relative">
               <Navbar />
             </div>
-            <div className="w-full scroll-container">{children}</div>
+            <div className="w-full scroll-container flex justify-center flex-wrap">
+              {children}
+            </div>
             <div className="w-full">
               <Footer />
             </div>
