@@ -40,6 +40,8 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         btnbackground: "hsl(var(--btnbackground))",
+        btnactivebg: "hsl(var(--btnactivebg))",
+        btnactivetext: "hsl(var(--btnactivetext))",
         cardbordercolor: "hsl(var(--cardbordercolor))",
         darkercolor: "hsl(var(--darkercolor))",
         cardradialgradientbg: "hsl(var(--cardradialgradientbg))",

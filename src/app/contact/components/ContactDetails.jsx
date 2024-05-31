@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import CtaButton from "../../../components/ui/CtaButton";
 
 
 export default function ContactDetails() {
@@ -13,22 +14,10 @@ export default function ContactDetails() {
 
             <div className="w-full pt-8 flex flex-wrap justify-evenly lg:justify-between">
                 <div className="md:w-[40%] lg:w-[48%] flex flex-wrap">
-                    <div className="flex w-full md:w-auto lg:h-full justify-center sm:justify-end items-end">
-                        <a className="group h-[4rem] min-w-[140px] inline-block rounded-lg bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75" href="#">
-                            <span className="flex h-full text-sm rounded-lg bg-btnbackground md:px-2 lg:px-4 py-2 font-medium group-hover:bg-transparent items-center justify-center text-center">
-                                Via le questionnaire en ligne
-                            </span>
-                        </a>
-                    </div>
+                    <CtaButton buttonText={"Via le questionnaire en ligne"}/>
                 </div>
                 <div className="md:w-[40%] lg:w-[48%] flex flex-wrap">
-                    <div className="flex w-full md:w-auto lg:h-full justify-center sm:justify-end items-end">
-                        <a className="group h-[4rem] min-w-[140px] inline-block rounded-lg bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75" href="#">
-                            <span className="flex h-full text-sm rounded-lg bg-btnbackground md:px-2 lg:px-4 py-2 font-medium group-hover:bg-transparent items-center justify-center text-center">
-                                Sur rendez-vous
-                            </span>
-                        </a>
-                    </div>
+                    <CtaButton buttonText={"Sur rendez-vous"}/>
                 </div>
             </div>
         

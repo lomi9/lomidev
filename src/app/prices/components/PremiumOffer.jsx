@@ -1,5 +1,6 @@
 "use client"
 
+import InfoButton from "@/components/ui/InfoButton";
 import { CircleCheckBig, CirclePlus, Paintbrush, PiggyBank, SquareDashedBottomCode, SquareUserRound } from "lucide-react";
 
 
@@ -16,11 +17,7 @@ export default function PremiumOffer() {
 
         <div className="flex pb-6 flex-wrap w-full md:w-auto lg:h-full lg:p-8 justify-center items-end">
             <p className="w-full flex justify-center text-xs pb-2"> à partir de : </p>
-            <div className="group min-w-[120px] inline-block rounded-full bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
-                <span className="flex text-sm rounded-full bg-btnbackground px-4 py-2 font-medium group-hover:bg-transparent items-center justify-center flex-wrap">
-                    <p className="w-full flex justify-center text-lg"> 1250€ </p>
-                </span>
-            </div>
+            <InfoButton buttonText={"1250€"}/>
         </div>
 
         <div className="border border-solid rounded-sm p-4 shadow-inner-halo-valid">

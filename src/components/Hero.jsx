@@ -2,6 +2,7 @@
 import HeroVideo from "./HeroVideo";
 import { useTheme } from '../contexts/ThemeContext';
 import { ArrowUpRight, AtSign, BookType, CodeXml, Network, ShieldCheck } from "lucide-react";
+import CtaButton from "@/components/ui/CtaButton";
 
 
 
@@ -23,15 +24,10 @@ const Hero = () => {
               
               <div>
                 <p className="font-bold text-sm md:text-lg lg:p-2 lg:pl-8" >Obtenez un devis gratuit !</p>
-                <p className="font-thin text-sm md:text-lg lg:pt-2 lg:pl-8"> Présentez-moi votre projet via ce petit questionnaire :</p>
+                <p className="font-thin text-sm md:text-lg lg:pt-2 lg:pl-8"> Présentez-moi votre projet via <br/> ce petit questionnaire :</p>
               </div>
-              <div className="flex w-full md:w-auto lg:h-full lg:p-8 justify-center sm:justify-end items-end">
-
-                  <a className="group min-w-[140px] inline-block rounded-full bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75" href="#">
-                    <span className="flex text-sm rounded-full bg-btnbackground px-4 py-2 font-medium group-hover:bg-transparent items-center justify-between">
-                      C&apos;est parti ! <ArrowUpRight className="w-[20%]"/>
-                    </span>
-                  </a>
+              <div className="btn-container flex pr-6 items-end h-full pb-8 ">
+                <CtaButton buttonText={"C'est parti !"}/>
               </div>
               </div>
 
@@ -44,7 +40,7 @@ const Hero = () => {
                 <div className="w-full h-full card-radial-gradient bg-cardradialgradientbg rounded-l-[200px]">
                 </div>
 
-                <div className="icon1 absolute top-[-27px] right-[25px] p-[3px] bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 rounded-full">
+                <div className="icon1 absolute top-[-27px] right-[25px] p-[1px] bg-gradient-to-r from-[#A6F69D] via-[#59E9F6] to-[#F6B9E8] rounded-full">
                   <div className="w-[50px] h-[50px] rounded-full bg-gradient-to-r from-cardradialgradientbg to-darkercolor ">
                     <p className=" h-full w-full flex text-accent-foreground justify-center items-center">
                       <AtSign/>
@@ -52,7 +48,7 @@ const Hero = () => {
                   </div>
                 </div>
                 
-                <div className="icon2 absolute top-[37px] right-[120px] p-[3px] bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 rounded-full">
+                <div className="icon2 absolute top-[37px] right-[120px] p-[1px] bg-gradient-to-r from-[#A6F69D] via-[#59E9F6] to-[#F6B9E8] rounded-full">
                   <div className="w-[50px] h-[50px] rounded-full bg-gradient-to-r from-cardradialgradientbg to-darkercolor ">
                   <p className=" h-full w-full flex text-accent-foreground justify-center items-center">
                       <BookType/>
@@ -60,7 +56,7 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="icon3 absolute top-[155px] right-[155px] p-[3px] bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 rounded-full">
+                <div className="icon3 absolute top-[155px] right-[155px] p-[1px] bg-gradient-to-r from-[#A6F69D] via-[#59E9F6] to-[#F6B9E8] rounded-full">
                   <div className="w-[50px] h-[50px] rounded-full bg-gradient-to-r from-cardradialgradientbg to-darkercolor ">
                   <p className=" h-full w-full text-accent-foreground flex justify-center items-center">
                       <CodeXml/>
@@ -68,7 +64,7 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="icon4 absolute bottom-[37px] right-[120px] p-[3px] bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 rounded-full">
+                <div className="icon4 absolute bottom-[37px] right-[120px] p-[1px] bg-gradient-to-r from-[#A6F69D] via-[#59E9F6] to-[#F6B9E8] rounded-full">
                   <div className="w-[50px] h-[50px] rounded-full bg-gradient-to-r from-cardradialgradientbg to-darkercolor ">
                   <p className=" h-full w-full text-accent-foreground flex justify-center items-center">
                       <Network/>
@@ -76,7 +72,7 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="icon5 absolute bottom-[-27px] right-[25px] p-[3px] bg-gradient-to-r from-green-200 via-orange-300 to-pink-300 rounded-full">
+                <div className="icon5 absolute bottom-[-27px] right-[25px] p-[1px] bg-gradient-to-r from-[#A6F69D] via-[#59E9F6] to-[#F6B9E8] rounded-full">
                   <div className="w-[50px] h-[50px] rounded-full bg-gradient-to-r from-cardradialgradientbg to-darkercolor ">
                   <p className=" h-full w-full text-accent-foreground flex justify-center items-center">
                       <ShieldCheck/>

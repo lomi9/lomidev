@@ -7,7 +7,9 @@
     --background: 280 60% 99%;
     --foreground: 0 0% 18%;
 
-    --btnbackground: 45 12% 93%;
+    --btnbackground: 353 100% 97%;
+    --btnactivebg: 353, 100%, 98%;
+    --btnactivetext: 0 0% 35%;
     --cardbordercolor: 0 0% 98%;
     --cardradialgradientbg: 45 12% 93%;
     --darkercolor: 60 4% 84%;
@@ -36,7 +38,7 @@
     --border: 39, 31%, 82%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-    --tags: 337, 90%, 23%;
+    --tags: 174, 62%, 38%;
     --tagsborder: 220, 13%, 91%;
     --tagshover: 217, 19%, 27%;
 
@@ -47,7 +49,9 @@
     --background: 170 41% 3%;
     --foreground: 170 22% 100%;
 
-    --btnbackground: 198, 82%, 11%;
+    --btnbackground: 247, 81%, 11%;
+    --btnactivebg: 245, 73%, 17%;
+    --btnactivetext: 170 22% 100%;
     --cardbordercolor: 240 1% 10%;
     --cardradialgradientbg: 197 100% 27%;
     --darkercolor: 0 0% 0%;
@@ -69,7 +73,7 @@
     --destructive: 21 85% 60%;
     --destructive-foreground: 0 0% 0%;
     --ring: 170 91% 46%;
-    --tags: 139, 69%, 80%;
+    --tags: 172, 63%, 59%;
     --tagsborder: 220, 67%, 20%;
     --tagshover: 220, 13%, 91%;
   }
