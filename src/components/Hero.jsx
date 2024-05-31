@@ -20,13 +20,14 @@ const Hero = () => {
               <HeroVideo/>
             </div>
 
-            <div className={`div2 h-[25vh] p-2 sm:p-8 lg:p-0 lg:h-auto flex flex-wrap lg:flex-nowrap col-start-1 col-end-5 sm:col-end-3 row-start-3 items-center sm:content-between lg:content-normal lg:justify-between bg-opacity-30 border border-cardbordercolor rounded-3xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
+            <div className={`div2 h-[25vh] md:h-[27vh] p-2 sm:p-6 lg:p-0 lg:h-auto flex flex-wrap lg:flex-nowrap col-start-1 col-end-5 sm:col-end-3 row-start-3 items-center sm:content-between lg:content-normal lg:justify-between bg-opacity-30 border border-cardbordercolor rounded-3xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
               
-              <div>
-                <p className="font-bold text-sm md:text-lg lg:p-2 lg:pl-8" >Obtenez un devis gratuit !</p>
-                <p className="font-thin text-sm md:text-lg lg:pt-2 lg:pl-8"> Présentez-moi votre projet via <br/> ce petit questionnaire :</p>
+              <div className="w-full sm:w-auto">
+                <p className="font-bold text-sm md:text-base lg:p-2 lg:pl-8" >Obtenez un devis gratuit !</p>
+                <p className="hidden sm:flex font-thin w-full sm:w-auto text-sm md:text-base lg:pt-2 lg:pl-8"> Présentez-moi votre projet via <br/> ce petit questionnaire :</p>
+                <p className="flex sm:hidden pt-2 font-thin w-full sm:w-auto text-sm md:text-lg lg:pt-2 lg:pl-8"> Présentez-moi votre projet via ce petit questionnaire :</p>
               </div>
-              <div className="btn-container flex pr-6 items-end h-full pb-8 ">
+              <div className="btn-container flex lg:pr-6 lg:pb-6 w-full lg:w-auto justify-end items-end lg:h-full  ">
                 <CtaButton buttonText={"C'est parti !"}/>
               </div>
               </div>
