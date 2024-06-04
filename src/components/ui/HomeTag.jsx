@@ -17,7 +17,7 @@ const HomeTag = ({ title, text }) => {
                       {title}
                     </span>
                     {showTooltip && (
-                    <div className="absolute text-[3.2vw] md:text-[2.5vw] lg:text-[1vw] bg-background text-foreground p-2 rounded shadow-lg mt-2 border border-solid border-foreground/50">
+                    <div className="absolute text-[3.2vw] md:text-[2.5vw] lg:text-[1vw] bg-background text-foreground p-2 rounded shadow-lg mt-2 border border-solid border-foreground/10">
                         {text}
                     </div>
                 )}

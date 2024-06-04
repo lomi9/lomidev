@@ -1,7 +1,7 @@
 "use client"
 import HeroVideo from "./HeroVideo";
 import { useTheme } from '../contexts/ThemeContext';
-import { ArrowUpRight, AtSign, BookType, CodeXml, Network, ShieldCheck } from "lucide-react";
+import { AtSign, BookType, CodeXml, Network, ShieldCheck } from "lucide-react";
 import CtaButton from "@/components/ui/CtaButton";
 
 

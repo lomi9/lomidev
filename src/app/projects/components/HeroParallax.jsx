@@ -1,10 +1,20 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { X } from "lucide-react";
 
 const HeroParallax = ({ products }) => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const openModal = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+  };
+
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
   const thirdRow = products.slice(10, 15);
@@ -42,6 +52,7 @@ const HeroParallax = ({ products }) => {
   );
 
   return (
+    <>
     <div
       ref={ref}
       className=" h-[280vh] sm:h-[500vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
@@ -57,41 +68,50 @@ const HeroParallax = ({ products }) => {
         className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse sm:space-x-reverse md:space-x-reverse space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
-        {firstRow.map((product, index) => (
+          {firstRow.map((product, index) => (
             <ProductCard
               product={product}
               translate={translateX}
               key={`${product.title}-${index}`}
+              onClick={() => openModal(product)}
             />
           ))}
         </motion.div>
         <motion.div className="flex flex-row space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
-        {secondRow.map((product, index) => (
+          {secondRow.map((product, index) => (
             <ProductCard
               product={product}
               translate={translateXReverse}
               key={`${product.title}-${index}`}
+              onClick={() => openModal(product)}
             />
           ))}
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse sm:space-x-reverse md:space-x-reverse space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
-        {thirdRow.map((product, index) => (
+          {thirdRow.map((product, index) => (
             <ProductCard
               product={product}
               translate={translateX}
               key={`${product.title}-${index}`}
+              onClick={() => openModal(product)}
             />
           ))}
         </motion.div>
       </motion.div>
+
+     
     </div>
+     {selectedProduct && (
+      <Modal product={selectedProduct} onClose={closeModal} />
+    )}
+  </>
   );
 };
 
 const Header = () => {
   return (
     <div className=" max-w-screen-sm sm:max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+      <h1 className="text-2xl sm:text-4xl font-bold dark:text-white">
         Coup d&#39;oeil <br /> Sur mes projets
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
@@ -101,7 +121,7 @@ const Header = () => {
   );
 };
 
-const ProductCard = ({ product, translate }) => {
+const ProductCard = ({ product, translate, onClick }) => {
   return (
     <motion.div
       style={{
@@ -112,6 +132,7 @@ const ProductCard = ({ product, translate }) => {
       }}
       key={product.title}
       className="group/product h-80 w-[25rem] sm:h-96 sm:w-[30rem] relative flex-shrink-0"
+      onClick={onClick}
     >
       <div className="block group-hover/product:shadow-2xl">
         <Image
@@ -127,6 +148,41 @@ const ProductCard = ({ product, translate }) => {
         {product.title}
       </h2>
     </motion.div>
+  );
+};
+
+const Modal = ({ product, onClose }) => {
+  return (
+    <div className="fixed w-screen h-screen inset-0 left-0 flex items-center justify-center z-50">
+      <div className="modal_background fixed inset-0 bg-black opacity-30" onClick={onClose}></div>
+      <div className="fixed px-8 rounded z-10 w-full sm:w-[80%]">
+        <div className=" w-full h-full flex flex-wrap rounded px-8 pb-8 pt-2 bg-background/60 backdrop-blur-[25px] backdrop-saturate-[1.06] border border-solid border-cardbordercolor/20">
+          <div className="w-full flex pb-8 flex-wrap justify-between"> 
+          <h2 className="text-2xl pt-6 font-bold">{product.title}</h2>
+            <button
+              className=" bg-transparent text-foreground"
+              onClick={onClose}
+            >
+            <X/>
+          </button>
+          </div>
+
+          <div className="modal-content">
+            <div className="modal-slider">
+            </div>
+
+            <div className="modal-description ">
+              <p>Offre : Site web vitrine premium</p>
+              <p>Prestation(s): Création de site web vitrine, création de logo et de charte graphique</p>
+            </div>
+
+          </div>
+          
+          <p className="mt-4">{product.description}</p>
+         
+        </div>
+      </div>
+    </div>
   );
 };
 
