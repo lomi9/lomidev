@@ -22,6 +22,7 @@ export default function PricingTabs() {
 
   const toggleAccordion = (tabName) => {
     setOpenTab(openTab === tabName ? null : tabName);
+    setActiveTab(tabName);
   };
 
   return (

@@ -1,17 +1,23 @@
 import React from "react";
 import { X } from "lucide-react";
 import ImageCarousel from "./ImageCarousel"; 
+import Link from "next/link";
 
 const Modal = ({ product, onClose }) => {
   return (
-    <div className="fixed w-screen h-screen inset-0 left-0 flex items-center justify-center z-50">
-      <div className="modal_background fixed inset-0 bg-foreground opacity-60" onClick={onClose}></div>
-      <div className="fixed px-8 rounded z-10 w-full sm:w-[80%]">
-        <div className="w-full h-full flex flex-wrap rounded px-8 pb-8 pt-2 bg-background/60 backdrop-blur-[25px] backdrop-saturate-[1.06] border border-solid border-cardbordercolor/20">
-          <div className="w-full flex pb-8 flex-wrap justify-between"> 
-            <h2 className="text-2xl pt-6 font-bold">{product.title}</h2>
+    <>
+
+    <section className="modal-screen-container flex flex-wrap fixed w-screen h-screen top-0 left-0 items-center justify-center z-50">
+      <div className="modal-screen-background relative w-full h-full flex flex-wrap items-center bg-foreground opacity-60" onClick={onClose}></div>
+      <div className="modal-screen-position mt-4 h-[85vh] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-8 pb-8 rounded z-10 w-full">
+        <div className="relative modal-background mt-4 w-full h-[85vh] flex flex-wrap rounded px-8 pb-8 pt-2  border border-solid border-cardbordercolor/20">
+         <div className="absolute w-full h-full top-0 left-0 rounded bg-background/60 backdrop-blur-[25px] backdrop-saturate-[1.06]">
+
+         </div>
+         <div className="modal-title-container w-full flex pb-8 flex-wrap justify-between"> 
+            <h2 className="modal-title text-2xl pt-6 font-bold z-20">{product.title}</h2>
             <button
-              className="bg-transparent text-foreground"
+              className="modal-close bg-transparent text-foreground z-20"
               onClick={onClose}
             >
               <X />
@@ -19,16 +25,16 @@ const Modal = ({ product, onClose }) => {
           </div>
 
           <div className="modal-content flex flex-wrap w-full">
-            <div className="w-full md:w-[50%]">
+            <div className="modal-carousel-container w-full md:w-[50%]">
               <ImageCarousel images={product.images} /> 
             </div>
-            <div className="modal-description mt-4 w-full md:w-[50%] sm:pl-8">
+            <div className="modal-description max-h-[30vh] overflow-y-scroll flex flex-wrap mt-4 w-full md:w-[50%] sm:pl-8">
                 <div className="w-full pb-8 flex flex-wrap">
                     <p className="relative font-semibold mr-4">
                         Offre:
                         <span className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from transparent via-cyan-200 dark:via-teal-200 to-transparent"></span>
                     </p>
-                    <p>{product.offer}</p>
+                    <Link href={`/prices?tab=${encodeURIComponent(product.tabName)}`} className="z-20">{product.offer}</Link>
                 </div>
 
                 <div className="w-full pb-8 flex flex-wrap">
@@ -38,7 +44,7 @@ const Modal = ({ product, onClose }) => {
                         <span className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from transparent via-orange-200 dark:via-orange-200 to-transparent"></span>
                     </p>
                 </div>
-                <ul className="list-disc list-inside">
+                <ul className="list-disc list-inside z-20">
                 {product.prestations.map((prestation) => (
                   <li key={prestation.id}>{prestation.name}</li>
                 ))}
@@ -47,16 +53,17 @@ const Modal = ({ product, onClose }) => {
               <div className="w-full pb-8 flex flex-wrap">
                     <p className="relative font-semibold mr-4">
                     Description du projet :
-                        <span className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from transparent via-green-200 dark:via-green-200 to-transparent"></span>
+                        <span className=" z-20 absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from transparent via-green-200 dark:via-green-200 to-transparent"></span>
                     </p>
-                    <p>{product.description}</p>
+                    <p className="z-20">{product.description}</p>
                 </div>
               
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    </>
   );
 };
 

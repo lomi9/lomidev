@@ -56,7 +56,7 @@ const ProjectShowcase = ({ products }) => {
     <>
       <div
         ref={ref}
-        className="h-[300vh] sm:h-[420vh] md:h-[420vh] lg:h-[420vh] xl:h-[380vh] 2xl:h-[350vh] py-40 md:py-32 lg:py-32 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+        className="h-[350vh] sm:h-[420vh] md:h-[420vh] lg:h-[420vh] xl:h-[380vh] 2xl:h-[350vh] py-40 md:py-32 lg:py-32 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
       >
         <Header />
         <motion.div
@@ -70,7 +70,7 @@ const ProjectShowcase = ({ products }) => {
         >
           <div className="relative w-full bg-transparent flex flex-wrap justify-center my-10">
             <h2 className="text-2xl antialiased font-semibold py-8 ">Casa Marerio</h2>
-            <span className="absolute left-20 right-20 bottom-0 h-[2px] dark:h-[1px] bg-gradient-to-r from-transparent via-teal-200 to-transparent"></span>
+            <span className="absolute left-20 right-20 bottom-0 h-[2px] dark:h-[1px] bg-gradient-to-r from-green-300 via-pink-300 to-cyan-400 rounded-3xl"></span>
           </div>
           <motion.div className="flex flex-row-reverse space-x-reverse sm:space-x-reverse md:space-x-reverse space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
             {firstRow.map((product, index) => (
@@ -84,7 +84,7 @@ const ProjectShowcase = ({ products }) => {
           </motion.div>
           <div className="relative w-full bg-transparent flex flex-wrap justify-center my-10">
             <h2 className="text-2xl antialiased font-semibold py-8 ">Halima Garden</h2>
-            <span className="absolute left-20 right-20 bottom-0 h-[2px] dark:h-[1px] bg-gradient-to-r from-transparent via-orange-200 to-transparent"></span>
+            <span className="absolute left-20 right-20 bottom-0 h-[2px] dark:h-[1px] bg-gradient-to-r from-green-300 via-pink-300 to-cyan-400 rounded-3xl"></span>
           </div>
           <motion.div className="flex flex-row space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
             {secondRow.map((product, index) => (
@@ -98,7 +98,7 @@ const ProjectShowcase = ({ products }) => {
           </motion.div>
           <div className="relative w-full bg-transparent flex flex-wrap justify-center my-10">
             <h2 className="text-2xl antialiased font-semibold py-8 ">Bel Horizon</h2>
-            <span className="absolute left-20 right-20 bottom-0 h-[2px] dark:h-[1px] bg-gradient-to-r from-transparent via-green-300 to-transparent"></span>
+            <span className="absolute left-[10rem] right-[10rem] bottom-0 h-[1px] dark:h-[1px] bg-gradient-to-r from-green-300 via-pink-300 to-cyan-400 rounded-3xl"></span>
           </div>
           <motion.div className="flex flex-row-reverse space-x-reverse sm:space-x-reverse md:space-x-reverse space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
             {thirdRow.map((product, index) => (
