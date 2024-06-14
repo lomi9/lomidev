@@ -52,7 +52,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-[25em] mx-auto mt-10 p-6 bg-gray-100 rounded-lg shadow-md border border-gray-300">
+    <div className="w-[25em] mx-auto mt-10 p-6 bg-background/30 rounded-lg shadow-md border border-gray-300">
       <div className='flex flex-wrap w-full items-center justify-center mb-8'>
         <h2 className="flex items-center md:text-xl lg:text-2xl font-bold text-gray-900">
           Contact rapide ici
