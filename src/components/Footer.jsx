@@ -1,11 +1,15 @@
+"use client"
 import { BadgeCheck, Mail, Phone } from "lucide-react";
 import facebookIcon from "../../public/facebook_icon.png";
 import Image from "next/image";
+import { useState } from "react";
+import Link from "next/link";
 
 
 const Footer = () => {
 
     const facebook = facebookIcon;
+    const [showTooltip, setShowTooltip] = useState(false);
 
     return (
         <footer className="relative bg-transparent mt-12 overflow-y-hidden max-h-[200px] sm:max-h-[300px]">
@@ -25,13 +29,30 @@ const Footer = () => {
                             <BadgeCheck className=" w-[1rem] text-green-300"/>
                             <p className="font-kanit text-xs pl-2"> Délai actuel de prise en charge : 2 semaines </p>
                         </div>
-                            <div className="w-full flex justify-center items-center space-x-6">
-                                <a href="#" className="hover:text-gray-400 flex flex-wrap justify-center items-center"><Image src={facebook} width={30} height={30} alt="facebook icon" /> </a>
-                                <a href="#" className="hover:text-gray-400 flex flex-wrap justify-center items-center"><Phone/></a>
-                                <a href="#" className="hover:text-gray-400 flex flex-wrap justify-center items-center"><Mail/></a>
-                            </div>
+                        <div className="w-full flex justify-center items-center space-x-6">
+            <div
+              className="relative flex flex-wrap justify-center items-center"
+              onMouseEnter={() => setShowTooltip(true)}
+              onMouseLeave={() => setShowTooltip(false)}
+            >
+              <a href="" className="hover:text-gray-400">
+                <Image src={facebook} width={30} height={30} alt="facebook icon" />
+              </a>
+              {showTooltip && (
+                <div className="absolute bottom-full mb-2 px-2 py-1 bg-gray-700 text-white text-xs rounded">
+                  Bientôt
+                </div>
+              )}
+            </div>
+            <a href="tel:+123456789" className="hover:text-gray-400 flex flex-wrap justify-center items-center">
+              <Phone />
+            </a>
+            <a href="mailto:contact@lomi-dev.com" className="hover:text-gray-400 flex flex-wrap justify-center items-center">
+              <Mail />
+            </a>
+          </div>
                             <div className="w-full flex justify-center items-center space-x-6  mt-4 sm:mt-6">
-                                <a href="#" className="hover:text-gray-400 text-xs flex flex-wrap justify-center items-center">Mentions légales</a>
+                                <Link href="/mentions" className="hover:text-gray-400 text-xs flex flex-wrap justify-center items-center">Mentions légales</Link>
                                 <p>-</p>
                                 <a href="#" className="hover:text-gray-400 text-xs flex flex-wrap justify-center items-center">Conditions générales de vente</a>
                             </div>
