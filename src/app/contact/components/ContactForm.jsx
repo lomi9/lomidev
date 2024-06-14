@@ -98,6 +98,8 @@ export default function ContactForm() {
             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
             onChange={handleCaptchaChange}
           />
+
+          
         </div>
         <div className='w-full flex justify-center items-center py-6'>
           <div className="flex items-center justify-between">
