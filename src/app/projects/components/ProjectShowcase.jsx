@@ -1,5 +1,6 @@
-"use client";
-import React, { useRef, useState } from "react";
+"use client"
+
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Header from "./ProjectsHeader";
 import ProductCard from "./ProductCard";
@@ -52,6 +53,16 @@ const ProjectShowcase = ({ products }) => {
     springConfig
   );
 
+  useEffect(() => {
+    if (selectedProduct) {
+      // Disable scrolling when the modal is open
+      document.body.style.overflow = "hidden";
+    } else {
+      // Enable scrolling when the modal is closed
+      document.body.style.overflow = "auto";
+    }
+  }, [selectedProduct]);
+
   return (
     <>
       <div
@@ -77,7 +88,7 @@ const ProjectShowcase = ({ products }) => {
               <ProductCard
                 product={product}
                 translate={translateX}
-                key={`${product.title}-${index}`}
+                key={product.id || `${product.title}-${index}`}
                 onClick={() => openModal(product)}
               />
             ))}
@@ -91,7 +102,7 @@ const ProjectShowcase = ({ products }) => {
               <ProductCard
                 product={product}
                 translate={translateXReverse}
-                key={`${product.title}-${index}`}
+                key={product.id || `${product.title}-${index}`}
                 onClick={() => openModal(product)}
               />
             ))}
@@ -105,7 +116,7 @@ const ProjectShowcase = ({ products }) => {
               <ProductCard
                 product={product}
                 translate={translateX}
-                key={`${product.title}-${index}`}
+                key={product.id || `${product.title}-${index}`}
                 onClick={() => openModal(product)}
               />
             ))}

@@ -111,6 +111,10 @@ body {
   visibility: hidden !important;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .card-radial-gradient {
   opacity: 0.5;
   background-image: radial-gradient(circle at center center, #e5ebe4, #f0efec),
