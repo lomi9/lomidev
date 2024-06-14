@@ -5,6 +5,7 @@ import NeatBackground from "@/components/NeatBackground";
 import { Kanit, Syne, Roboto_Condensed } from "next/font/google";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "Lomi dev",
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
             <main className="main-content w-full scroll-container flex justify-center flex-wrap">
               {children}
               <Analytics />
+              <SpeedInsights />
             </main>
             <div className="footer-container w-full">
               <Footer />
