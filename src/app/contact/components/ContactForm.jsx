@@ -31,6 +31,8 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+
+    
     if (captchaValid) {
       emailjs.send(
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
