@@ -14,7 +14,7 @@ const ImageCarousel = ({ images }) => {
   };
 
   return (
-    <div className="relative w-full h-64 sm:h-96">
+    <div className="relative w-full h-64 sm:h-[60vw] lg:h-[40vw] xl:h-[35vw] 2xl:h-[500px]">
       <AnimatePresence initial={false}>
         <motion.img
           key={images[currentIndex]}
@@ -23,7 +23,7 @@ const ImageCarousel = ({ images }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute w-full h-full object-cover rounded"
+          className="absolute w-full object-cover rounded h-full"
         />
       </AnimatePresence>
       <button

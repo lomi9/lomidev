@@ -1,5 +1,5 @@
 import React from "react";
-import { X } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react";
 import ImageCarousel from "./ImageCarousel"; 
 import Link from "next/link";
 
@@ -14,35 +14,43 @@ const Modal = ({ product, onClose }) => {
          <div className="absolute w-full h-full top-0 left-0 rounded bg-background/60 backdrop-blur-[25px] backdrop-saturate-[1.06]">
 
          </div>
-         <div className="modal-title-container w-full flex pb-8 flex-wrap justify-between"> 
-            <h2 className="modal-title text-2xl pt-6 font-bold z-20">{product.title}</h2>
+         <div className="modal-title-container pt-6 relative w-full flex pb-8 flex-wrap justify-between lg:justify-center items-center"> 
+            <div className="w-full flex flex-wrap justify-center items-center">
+              <h2 className="modal-title text-2xl font-bold pr-4 z-20">{product.title}</h2>
+              <a href={product.link}><ArrowUpRight/></a>
+            </div>
+            <div className="w-full flex flex-wrap justify-center items-center py-2">
+              <p className="flex flex-wrap justify-center items-center italic tex-xs text-red-400">{product.build}</p>
+            </div>
             <button
-              className="modal-close bg-transparent text-foreground z-20"
+              className="absolute top-5 right-0 modal-close bg-transparent text-foreground z-20"
               onClick={onClose}
             >
               <X />
             </button>
           </div>
 
-          <div className="modal-content flex flex-wrap w-full">
-            <div className="modal-carousel-container w-full md:w-[50%]">
-              <ImageCarousel images={product.images} /> 
+          <div className="modal-content max-h-[70vh] overflow-y-scroll flex flex-wrap w-full">
+            <div className="modal-carousel-container w-full md:w-[50%] ">
+              <ImageCarousel images={product.images}/> 
             </div>
-            <div className="modal-description max-h-[30vh] overflow-y-scroll flex flex-wrap mt-4 w-full md:w-[50%] sm:pl-8">
+            <div className="modal-description flex flex-wrap mt-4 w-full md:w-[50%] sm:pl-8">
                 <div className="w-full pb-8 flex flex-wrap">
+                  <div className="pb-8">
                     <p className="relative font-semibold mr-4">
                         Offre:
                         <span className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from transparent via-cyan-200 dark:via-teal-200 to-transparent"></span>
                     </p>
+                    </div>
                     <Link href={`/prices?tab=${encodeURIComponent(product.tabName)}`} className="z-20">{product.offer}</Link>
                 </div>
 
                 <div className="w-full pb-8 flex flex-wrap">
-                    <div>
-                    <p className="relative font-semibold mr-4">
-                    Prestation(s):
-                        <span className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from transparent via-orange-200 dark:via-orange-200 to-transparent"></span>
-                    </p>
+                    <div className="pb-4 z-20">
+                      <p className="relative font-semibold z-20 mr-4">
+                        Prestation(s):
+                        <span className="absolute z-20 bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from transparent via-orange-200 dark:via-orange-200 to-transparent"></span>
+                      </p>
                 </div>
                 <ul className="list-disc list-inside z-20">
                 {product.prestations.map((prestation) => (
@@ -51,11 +59,13 @@ const Modal = ({ product, onClose }) => {
               </ul>
               </div>
               <div className="w-full pb-8 flex flex-wrap">
+                <div className="pb-8">
                     <p className="relative font-semibold mr-4">
                     Description du projet :
                         <span className=" z-20 absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from transparent via-green-200 dark:via-green-200 to-transparent"></span>
                     </p>
-                    <p className="z-20">{product.description}</p>
+                  </div>
+                  <p className="z-20">{product.description}</p>
                 </div>
               
             </div>

@@ -105,8 +105,10 @@ body {
   margin: auto;
 }
 
-#neat-link {
+#neat-link,
+#FZo4uv {
   display: none !important;
+  visibility: hidden !important;
 }
 
 .card-radial-gradient {
