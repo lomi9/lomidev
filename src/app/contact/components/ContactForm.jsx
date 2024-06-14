@@ -1,12 +1,12 @@
-// Import des dépendances nécessaires
+"use client"
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Input from './Input';
 import { Label } from './Label';
-import Notification from './Notification'; // Importez le composant Notification
+import Notification from './Notification'; 
 
-// Définition du composant ContactForm
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
