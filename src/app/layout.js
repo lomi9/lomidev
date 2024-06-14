@@ -4,6 +4,7 @@ import { ThemeProvider } from "../../src/contexts/ThemeContext";
 import NeatBackground from "@/components/NeatBackground";
 import { Kanit, Syne, Roboto_Condensed } from "next/font/google";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Lomi dev",
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
             </div>
             <main className="main-content w-full scroll-container flex justify-center flex-wrap">
               {children}
+              <Analytics />
             </main>
             <div className="footer-container w-full">
               <Footer />
