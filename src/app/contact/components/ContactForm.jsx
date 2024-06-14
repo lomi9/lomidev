@@ -1,13 +1,12 @@
-"use client";
-
-import { ArrowDown, ArrowUpRight } from 'lucide-react';
+// Import des dépendances nécessaires
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
+import ReCAPTCHA from 'react-google-recaptcha';
 import Input from './Input';
 import { Label } from './Label';
-import ReCAPTCHA from 'react-google-recaptcha';
 import Notification from './Notification'; // Importez le composant Notification
 
+// Définition du composant ContactForm
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -42,7 +41,8 @@ export default function ContactForm() {
         .then((response) => {
           console.log('SUCCESS!', response.status, response.text);
           setNotification({ message: 'Email envoyé avec succès!', type: 'success' });
-        }, (err) => {
+        })
+        .catch((err) => {
           console.log('FAILED...', err);
           setNotification({ message: 'Erreur lors de l\'envoi de l\'email.', type: 'error' });
         });
@@ -57,11 +57,10 @@ export default function ContactForm() {
         <h2 className="flex items-center md:text-xl lg:text-2xl font-bold text-gray-900">
           Contact rapide ici
         </h2>
-        <ArrowDown className='ml-4 flex flex-wrap text-gray-900 items-center justify-start'/>
       </div>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <Label htmlFor="name">Nom  Prénom</Label>
+          <Label htmlFor="name">Nom & Prénom</Label>
           <Input
             type="text"
             name="name"
@@ -98,19 +97,14 @@ export default function ContactForm() {
             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
             onChange={handleCaptchaChange}
           />
-
-
         </div>
         <div className='w-full flex justify-center items-center py-6'>
-          <div className="flex items-center justify-between">
-            <button
-              type="submit"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            >
-              Envoyer
-              <ArrowUpRight className="ml-2"/>
-            </button>
-          </div>
+          <button
+            type="submit"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Envoyer
+          </button>
         </div>
       </form>
       {notification && (
