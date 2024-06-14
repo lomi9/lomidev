@@ -9,7 +9,7 @@ export default function CustomSolutions() {
   return (
     <div>
       
-    <h1 className="flex justify-center text-xl font-bold py-6">Votre site e-commerce ou solution personnalisée</h1>
+    <h3 className="flex justify-center text-xl font-bold py-6">Votre site e-commerce ou solution personnalisée</h3>
 
     <p className="pb-6 text-sm">Idéal si vous souhaitez vendre des produits ou des services en ligne. </p>
 

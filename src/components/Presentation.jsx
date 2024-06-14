@@ -63,7 +63,7 @@ const Presentation = () => {
         <div className=" presentation-section bg-transparent flex flex-wrap flex-col lg:flex-row w-full px-4 sm:px-8 md:px-12 lg:px-18 gap-10">
                    
                 {items.map((item) => (
-                    <div className=" presentation-section-item h-full flex flex-1 items-center justify-center" key={item.id}>
+                    <article className=" presentation-section-item h-full flex flex-1 items-center justify-center" key={item.id}>
                        
                         <div className="h-full w-full flex items-center justify-center">
                 
@@ -75,8 +75,8 @@ const Presentation = () => {
                                     </div>
                                     <div className="w-[55%] min-h-[55vw] md:min-h-[35vw] lg:min-h-[17vw] flex flex-wrap items-center justify-center">
                                         <p className=" hidden w-full justify-center text-6xl items-center">{item.number}.</p>
-                                        <p className="flex text-[5vw] md:text-[4vw] lg:text-[1.5vw] flex-wrap flex-col w-auto justify-center font-bold items-center">{item.title}
-                                        <span className="flex w-[60%] bg-gradient-to-r from-green-100 via-orange-200 to-pink-200 h-[2px] rounded-3xl"></span></p>
+                                        <h3 className="flex text-[5vw] md:text-[4vw] lg:text-[1.5vw] flex-wrap flex-col w-auto justify-center font-bold items-center">{item.title}
+                                        <span className="flex w-[60%] bg-gradient-to-r from-green-100 via-orange-200 to-pink-200 h-[2px] rounded-3xl"></span></h3>
                                     </div>
                                     <div className="w-full px-8 min-h-[45vw] md:min-h-[20vw] lg:min-h-[14vw] flex flex-wrap items-start">
                                         <p className="text-[4.5vw] md:text-[3vw] lg:text-[1.3vw] font-thin">{item.text}</p>
@@ -93,7 +93,7 @@ const Presentation = () => {
                             
                         </div>
                         
-                    </div>
+                    </article>
                 ))}
         </div>
     );

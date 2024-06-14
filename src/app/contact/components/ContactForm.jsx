@@ -21,7 +21,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ajoutez ici la logique pour envoyer les données du formulaire
+    // Ajouter ici la logique pour envoyer les données du formulaire
     console.log(formData);
   };
 

@@ -1,12 +1,13 @@
 "use client";
 import HeroVideo from "./HeroVideo";
 import { useTheme } from '../contexts/ThemeContext';
-import { AtSign, BookType, CodeXml, Network, NotebookPen, Paintbrush, Rocket, ShieldCheck } from "lucide-react";
+import { CodeXml, NotebookPen, Paintbrush, Rocket, ShieldCheck } from "lucide-react";
 import CtaButton from "@/components/ui/CtaButton";
 import IconTooltip from "./ui/IconTooltip";
 
 const Hero = () => {
   const { theme } = useTheme();
+  const ctaLink = "https://8yjdazjfoda.typeform.com/to/LNX3zQRj"
 
   return (
     <>
@@ -23,7 +24,7 @@ const Hero = () => {
               <p className="flex sm:hidden pt-2 font-thin w-full sm:w-auto text-sm md:text-lg lg:pt-2 lg:pl-8">Présentez-moi votre projet via ce petit questionnaire :</p>
             </div>
             <div className="btn-container flex lg:pr-6 lg:pb-6 w-full lg:w-auto justify-end items-end lg:h-full">
-              <CtaButton buttonText={"C'est parti !"} />
+              <CtaButton buttonText={"C'est parti !"} link={ctaLink} />
             </div>
           </div>
 

@@ -5,14 +5,14 @@ import ContactTitle from "./components/ContactTitle"
 const ContactPage = () => {
     
     return (
-        <div className="max-w-[1200px] relative w-full flex flex-wrap justify-center px-4 md:px-12 lg:px-18 pt-[6rem]">
+        <main className="max-w-[1200px] relative w-full flex flex-wrap justify-center px-4 md:px-12 lg:px-18 pt-[6rem]">
             <div className="w-full flex flex-wrap justify-start">
                 <ContactTitle/>
             </div>
             <div className="max-w-[1200px] w-full flex flex-wrap flex-col md:flex-row justify-center">
-            <div className="flex  w-[95%] md:w-[50%] flex-wrap justify-center md:px-8 lg:pr-10">
+            <section className="flex  w-[95%] md:w-[50%] flex-wrap justify-center md:px-8 lg:pr-10">
                 <ContactDetails/>
-            </div>
+            </section>
             <div className="flex w-[95%] md:w-[50%] flex-wrap justify-center md:px-8 lg:pr-10">
                 <ContactForm/>
             </div>
@@ -22,7 +22,7 @@ const ContactPage = () => {
                <div className="w-[20px] bg-primary h-[1px]"></div>
             </div>
             </div>
-        </div>
+        </main>
     )
 }
 

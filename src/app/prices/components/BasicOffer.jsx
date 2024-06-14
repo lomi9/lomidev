@@ -10,7 +10,7 @@ export default function BasicOffer() {
   return (
     <div>
       
-        <h1 className="flex justify-center text-xl font-bold py-6">Votre site web vitrine basique</h1>
+        <h3 className="flex justify-center text-xl font-bold py-6">Votre site web vitrine basique</h3>
 
         <p className="pb-6 text-sm">Idéal si vous débutez une activité, si vous souhaitez gérer vous-même votre site web, ou en cas de budget serré. </p>
 

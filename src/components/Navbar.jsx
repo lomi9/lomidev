@@ -20,7 +20,7 @@ const Navbar = () => {
 
     const topVariants = {
         closed: { rotate: 0 },
-        opened: { rotate: 45, backgroundColor: "rgb(255,255,255)" }
+        opened: { rotate: 45 }
     }
 
     const centerVariants = {
@@ -30,7 +30,7 @@ const Navbar = () => {
 
     const bottomVariants = {
         closed: { rotate: 0 },
-        opened: { rotate: -45, backgroundColor: "rgb(255,255,255)" }
+        opened: { rotate: -45 }
     }
 
     const listVariants = {
@@ -54,7 +54,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className="fixed w-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-18 text-xl">
+        <header className="fixed w-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-18 text-xl">
             {/* LOGO */}
             <div className="h-full w-[5rem]">
                 <Link href="/">
@@ -66,11 +66,11 @@ const Navbar = () => {
 
             {/* DESKTOP MENU */}
             <div className={`hidden md:flex items-center gap-6 px-4 py-2 bg-opacity-40 border border-gray-200 border-opacity-30 rounded-xl backdrop-blur-[25px] backdrop-saturate-[1.06] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
-                <div className="flex gap-4">
+                <nav className="flex gap-4">
                     {links.map((link) => (
                         <NavLink link={link} key={link.title} />
                     ))}
-                </div>
+                </nav>
                 {/* SWITCH DARK/LIGHT MODE */}
                 <div className="h-full flex items-center justify-end">
                     <Switch 
@@ -92,7 +92,7 @@ const Navbar = () => {
                 </button>
                 {/* MENU LIST */}
                 {open && (
-                    <motion.div
+                    <motion.nav
                         variants={listVariants}
                         initial="closed"
                         animate="opened"
@@ -111,10 +111,10 @@ const Navbar = () => {
                                 {theme === 'dark' ? 'Dark' : 'Light'}
                             </Switch>
                         </div>
-                    </motion.div>
+                    </motion.nav>
                 )}
             </div>
-        </div>
+        </header>
     );
 }
 

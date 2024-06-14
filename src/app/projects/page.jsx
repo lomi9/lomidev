@@ -1,4 +1,4 @@
-import HeroParallax from './components/HeroParallax';
+import ProjectShowcase from './components/ProjectShowcase';
 
 const ProjectsPage = () => {
   const products = [
@@ -270,7 +270,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="parallax-container overflow-hidden">
-      <HeroParallax products={products} />
+      <ProjectShowcase products={products} />
     </div>
   );
 };

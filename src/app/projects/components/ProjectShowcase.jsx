@@ -1,11 +1,11 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import Image from "next/image";
-import { X } from "lucide-react";
-import Modal from "./Modal"; // Importer le composant Modal
+import Header from "./ProjectsHeader";
+import ProductCard from "./ProductCard";
+import Modal from "./Modal";
 
-const HeroParallax = ({ products }) => {
+const ProjectShowcase = ({ products }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const openModal = (product) => {
@@ -56,7 +56,7 @@ const HeroParallax = ({ products }) => {
     <>
       <div
         ref={ref}
-        className="h-[280vh] sm:h-[500vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+        className="h-[300vh] sm:h-[420vh] md:h-[420vh] lg:h-[420vh] xl:h-[380vh] 2xl:h-[350vh] py-40 md:py-32 lg:py-32 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
       >
         <Header />
         <motion.div
@@ -68,6 +68,10 @@ const HeroParallax = ({ products }) => {
           }}
           className=""
         >
+          <div className="relative w-full bg-transparent flex flex-wrap justify-center my-10">
+            <h2 className="text-2xl antialiased font-semibold py-8 ">Casa Marerio</h2>
+            <span className="absolute left-20 right-20 bottom-0 h-[2px] dark:h-[1px] bg-gradient-to-r from-transparent via-teal-200 to-transparent"></span>
+          </div>
           <motion.div className="flex flex-row-reverse space-x-reverse sm:space-x-reverse md:space-x-reverse space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
             {firstRow.map((product, index) => (
               <ProductCard
@@ -78,6 +82,10 @@ const HeroParallax = ({ products }) => {
               />
             ))}
           </motion.div>
+          <div className="relative w-full bg-transparent flex flex-wrap justify-center my-10">
+            <h2 className="text-2xl antialiased font-semibold py-8 ">Halima Garden</h2>
+            <span className="absolute left-20 right-20 bottom-0 h-[2px] dark:h-[1px] bg-gradient-to-r from-transparent via-orange-200 to-transparent"></span>
+          </div>
           <motion.div className="flex flex-row space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
             {secondRow.map((product, index) => (
               <ProductCard
@@ -88,6 +96,10 @@ const HeroParallax = ({ products }) => {
               />
             ))}
           </motion.div>
+          <div className="relative w-full bg-transparent flex flex-wrap justify-center my-10">
+            <h2 className="text-2xl antialiased font-semibold py-8 ">Bel Horizon</h2>
+            <span className="absolute left-20 right-20 bottom-0 h-[2px] dark:h-[1px] bg-gradient-to-r from-transparent via-green-300 to-transparent"></span>
+          </div>
           <motion.div className="flex flex-row-reverse space-x-reverse sm:space-x-reverse md:space-x-reverse space-x-4 sm:space-x-10 md:space-x-20 mb-10 sm:mb-20">
             {thirdRow.map((product, index) => (
               <ProductCard
@@ -107,47 +119,4 @@ const HeroParallax = ({ products }) => {
   );
 };
 
-const Header = () => {
-  return (
-    <div className="max-w-screen-sm sm:max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl sm:text-4xl font-bold dark:text-white">
-        Coup d&#39;oeil <br /> Sur mes projets
-      </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        Je construis chacun de mes projets en utilisant les dernières technologies. Étant passionnée, je m&#39;efforce de vous livrer un site web moderne, en portant une grande attention aux détails.
-      </p>
-    </div>
-  );
-};
-
-const ProductCard = ({ product, translate, onClick }) => {
-  return (
-    <motion.div
-      style={{
-        x: translate,
-      }}
-      whileHover={{
-        y: -20,
-      }}
-      key={product.title}
-      className="group/product h-80 w-[25rem] sm:h-96 sm:w-[30rem] relative flex-shrink-0"
-      onClick={onClick}
-    >
-      <div className="block group-hover/product:shadow-2xl">
-        <Image
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-center absolute h-full w-full inset-0"
-          alt={product.title}
-        />
-      </div>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-70 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-        {product.title}
-      </h2>
-    </motion.div>
-  );
-};
-
-export default HeroParallax;
+export default ProjectShowcase;

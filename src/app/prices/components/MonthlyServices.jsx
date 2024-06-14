@@ -9,7 +9,7 @@ export default function MonthlyServices() {
   return (
     <div>
       
-    <h1 className="flex justify-center text-xl font-bold py-6">Votre assitance mensuelle personnalisée</h1>
+    <h3 className="flex justify-center text-xl font-bold py-6">Votre assitance mensuelle personnalisée</h3>
 
     <div className="flex pb-6 flex-wrap w-full md:w-auto lg:h-full lg:p-8 justify-center items-end">
         <p className="w-full flex justify-center text-xs pb-2"> à partir de : </p>

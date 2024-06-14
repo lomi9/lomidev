@@ -35,17 +35,17 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
       <html lang="fr" className={`${syne.className}`}>
         <body className="">
-          <div className="z-5 w-full h-screen fixed top-0 left-0 overflow-hidden">
+          <div className="animated-background z-5 w-full h-screen fixed top-0 left-0 overflow-hidden">
             <NeatBackground />
           </div>
-          <div className="relative w-full bg-gradient-to-b from-transparent to-transparent z-10">
-            <div className="w-full z-[100] relative">
+          <div className="page-container relative w-full bg-gradient-to-b from-transparent to-transparent z-10">
+            <div className="header-container w-full z-[100] relative">
               <Navbar />
             </div>
-            <div className="w-full scroll-container flex justify-center flex-wrap">
+            <main className="main-content w-full scroll-container flex justify-center flex-wrap">
               {children}
-            </div>
-            <div className="w-full">
+            </main>
+            <div className="footer-container w-full">
               <Footer />
             </div>
           </div>
