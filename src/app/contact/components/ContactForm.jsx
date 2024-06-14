@@ -61,7 +61,7 @@ export default function ContactForm() {
       </div>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <Label htmlFor="name">Nom Prénom</Label>
+          <Label htmlFor="name">Nom  Prénom</Label>
           <Input
             type="text"
             name="name"
@@ -99,7 +99,7 @@ export default function ContactForm() {
             onChange={handleCaptchaChange}
           />
 
-          
+
         </div>
         <div className='w-full flex justify-center items-center py-6'>
           <div className="flex items-center justify-between">
