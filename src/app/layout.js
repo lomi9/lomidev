@@ -44,6 +44,7 @@ export default function RootLayout({ children }) {
             <div className="header-container w-full z-[100] relative">
               <Navbar />
             </div>
+
             <main className="main-content w-full scroll-container flex justify-center flex-wrap">
               {children}
               <Analytics />
