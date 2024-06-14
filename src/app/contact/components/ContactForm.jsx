@@ -35,8 +35,8 @@ export default function ContactForm() {
       emailjs.send(
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
-        formData,
-        process.env.NEXT_PUBLIC_EMAIL_USER_ID
+        process.env.NEXT_PUBLIC_EMAIL_USER_ID,
+        formData
       )
         .then((response) => {
           console.log('SUCCESS!', response.status, response.text);
@@ -52,7 +52,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-[25em] mx-auto mt-10 p-6 bg-background/30 rounded-lg shadow-md border border-gray-300">
+    <div className="w-[25em] mx-auto mt-10 p-6 bg-background/30 rounded-lg shadow-md border  border-cardbordercolor">
       <div className='flex flex-wrap w-full items-center justify-center mb-8'>
         <h2 className="flex items-center md:text-xl lg:text-2xl font-bold text-gray-900">
           Contact rapide ici
