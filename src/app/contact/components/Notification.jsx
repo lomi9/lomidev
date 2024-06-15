@@ -4,7 +4,7 @@ function Notification({ message, type, onClose }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose();
-    }, 5000); // Ferme la notification après 5 secondes
+    }, 10000); // Ferme la notification après 10 secondes
 
     return () => clearTimeout(timer);
   }, [onClose]);

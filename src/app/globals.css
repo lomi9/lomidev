@@ -105,10 +105,25 @@ body {
   margin: auto;
 }
 
-#neat-link,
-#FZo4uv {
+#neat-link {
   display: none !important;
   visibility: hidden !important;
+}
+
+.light-point {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    #e2e0de 40%,
+    rgba(226, 224, 222, 0.5) 70%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  position: fixed;
+  bottom: -20px;
+  right: -20px;
+  filter: blur(10px);
 }
 
 .no-scroll {
