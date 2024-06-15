@@ -4,13 +4,14 @@ import emailjs from 'emailjs-com';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Input from './Input';
 import { Label } from './Label';
-import Notification from './Notification'; 
+import Notification from './Notification';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    'g-recaptcha-response': '' // Ajout de la clé pour la réponse reCAPTCHA
   });
 
   const [captchaValid, setCaptchaValid] = useState(false);
@@ -25,11 +26,14 @@ export default function ContactForm() {
 
   const handleCaptchaChange = (value) => {
     setCaptchaValid(value !== null);
+    setFormData({ 
+      ...formData, 
+      'g-recaptcha-response': value ? value : '' // Stocker ou effacer la réponse
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
 
     if (captchaValid) {
       emailjs.send(
@@ -52,8 +56,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div 
-    className="w-[25em] mx-auto mt-10 p-6 bg-background/30 rounded-lg shadow-md border  border-cardbordercolor">
+    <div className="w-[25em] mx-auto mt-10 p-6 bg-background/30 rounded-lg shadow-md border border-cardbordercolor">
       <div className='flex flex-wrap w-full items-center justify-center mb-8'>
         <h2 className="flex items-center md:text-xl lg:text-2xl font-bold text-gray-900">
           Contact rapide ici
@@ -109,10 +112,10 @@ export default function ContactForm() {
         </div>
       </form>
       {notification && (
-        <Notification 
-          message={notification.message} 
-          type={notification.type} 
-          onClose={() => setNotification(null)} 
+        <Notification
+          message={notification.message}
+          type={notification.type}
+          onClose={() => setNotification(null)}
         />
       )}
     </div>
