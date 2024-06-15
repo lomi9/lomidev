@@ -1,11 +1,10 @@
-"use client"
+"use client";
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Input from './Input';
 import { Label } from './Label';
 import Notification from './Notification'; 
-
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -31,14 +30,12 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
-    
     if (captchaValid) {
       emailjs.send(
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
-        process.env.NEXT_PUBLIC_EMAIL_USER_ID,
-        formData
+        formData,
+        process.env.NEXT_PUBLIC_EMAIL_USER_ID
       )
         .then((response) => {
           console.log('SUCCESS!', response.status, response.text);
@@ -96,7 +93,7 @@ export default function ContactForm() {
         </div>
         <div className="mb-4">
           <ReCAPTCHA
-            sitekey="6Ld6H_kpAAAAAH5Oun22QvqGkFkjrcILoTcHNg5M"
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
             onChange={handleCaptchaChange}
           />
         </div>
