@@ -30,6 +30,7 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+
     if (captchaValid) {
       emailjs.send(
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
@@ -51,7 +52,8 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-[25em] mx-auto mt-10 p-6 bg-background/30 rounded-lg shadow-md border  border-cardbordercolor">
+    <div 
+    className="w-[25em] mx-auto mt-10 p-6 bg-background/30 rounded-lg shadow-md border  border-cardbordercolor">
       <div className='flex flex-wrap w-full items-center justify-center mb-8'>
         <h2 className="flex items-center md:text-xl lg:text-2xl font-bold text-gray-900">
           Contact rapide ici
