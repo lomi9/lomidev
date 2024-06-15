@@ -93,7 +93,7 @@ export default function ContactForm() {
         </div>
         <div className="mb-4">
           <ReCAPTCHA
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            sitekey="6Ld6H_kpAAAAAH5Oun22QvqGkFkjrcILoTcHNg5M"
             onChange={handleCaptchaChange}
           />
         </div>
