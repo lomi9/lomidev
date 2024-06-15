@@ -7,13 +7,14 @@ import { Label } from './Label';
 import Notification from './Notification';
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: '',
     email: '',
     message: '',
     'g-recaptcha-response': '' // Ajout de la clé pour la réponse reCAPTCHA
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [captchaValid, setCaptchaValid] = useState(false);
   const [notification, setNotification] = useState(null);
 
@@ -42,14 +43,16 @@ export default function ContactForm() {
         formData,
         process.env.NEXT_PUBLIC_EMAIL_USER_ID
       )
-        .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
-          setNotification({ message: 'Email envoyé avec succès!', type: 'success' });
-        })
-        .catch((err) => {
-          console.log('FAILED...', err);
-          setNotification({ message: 'Erreur lors de l\'envoi de l\'email.', type: 'error' });
-        });
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setNotification({ message: 'Email envoyé avec succès!', type: 'success' });
+        setFormData(initialFormData); // Réinitialiser le formulaire après succès
+        setCaptchaValid(false); // Réinitialiser également l'état du captcha
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+        setNotification({ message: 'Erreur lors de l\'envoi de l\'email.', type: 'error' });
+      });
     } else {
       setNotification({ message: 'Captcha non validé.', type: 'error' });
     }
