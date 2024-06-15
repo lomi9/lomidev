@@ -39,7 +39,9 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
       <html lang="fr" className={`${syne.className}`}>
         <body className="">
-          <AxeptioConsent />
+          <AxeptioConsent
+            clientId={process.env.NEXT_PUBLIC_AXEPTIO_CLIENT_ID}
+          />
           <div className="animated-background z-5 w-full h-screen fixed top-0 left-0 overflow-hidden">
             <NeatBackground />
           </div>
