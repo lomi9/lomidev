@@ -5,6 +5,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import Input from './Input';
 import { Label } from './Label';
 import Notification from './Notification';
+import Textarea from './Texterea';
 
 export default function ContactForm() {
   const initialFormData = {
@@ -90,12 +91,12 @@ export default function ContactForm() {
         </div>
         <div className="mb-4">
           <Label htmlFor="message">Message</Label>
-          <Input
-            as="textarea"
+          <Textarea
             name="message"
             id="message"
             value={formData.message}
             onChange={handleChange}
+            className="flex flex-wrap w-full h-[150px] items-start justify-start"
             required
           />
         </div>

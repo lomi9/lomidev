@@ -1,6 +1,8 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
+const plugin = require("tailwindcss/plugin");
 const svgToDataUri = require("mini-svg-data-uri");
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -34,6 +36,10 @@ module.exports = {
         roboto: ["Roboto_Condensed", "sans-serif"],
       },
       colors: {
+        gray: colors.gray,
+        blue: colors.sky,
+        red: colors.rose,
+        pink: colors.fuchsia,
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -98,6 +104,7 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "radial-pulse": "radial-pulse 3s infinite",
       },
     },
   },

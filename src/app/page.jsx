@@ -1,5 +1,6 @@
 
 import Hero from "@/components/Hero";
+import LinksSection from "@/components/LinksSection";
 import Presentation from "@/components/Presentation";
 import WhyUs from "@/components/WhyUs";
 import Sentance from "@/components/ui/Sentance";
@@ -17,6 +18,9 @@ const Homepage = () => {
     </section>
     <section className="homePage-sentance bg-transparen max-w-[1700px] flex flex-wrap justify-center w-full">
       <Sentance/>
+    </section>
+    <section className="homePage-links bg-transparen max-w-[1700px] flex flex-wrap justify-center w-full">
+      <LinksSection/>
     </section>
     <section className="homePage-WhyUs bg-transparen max-w-[1700px] flex flex-wrap justify-center w-full">
       <WhyUs/>
