@@ -67,7 +67,7 @@ const ProjectShowcase = ({ products }) => {
     <>
       <div
         ref={ref}
-        className="h-[350vh] sm:h-[420vh] md:h-[420vh] lg:h-[420vh] xl:h-[380vh] 2xl:h-[350vh] py-40 md:py-32 lg:py-32 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+        className="h-[2700px] sm:h-[3000px] md:h-[3000px] lg:h-[3000px] xl:h-[3000px] 2xl:h-[3000px] py-40 md:py-32 lg:py-32 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
       >
         <Header />
         <motion.div
