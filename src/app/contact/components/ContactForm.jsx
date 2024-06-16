@@ -13,12 +13,13 @@ export default function ContactForm() {
     name: '',
     email: '',
     message: '',
-    'g-recaptcha-response': '' // Ajout de la clé pour la réponse reCAPTCHA
+    'g-recaptcha-response': ''
   };
 
   const [formData, setFormData] = useState(initialFormData);
   const [captchaValid, setCaptchaValid] = useState(false);
   const [notification, setNotification] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -38,7 +39,8 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (captchaValid) {
+      if (captchaValid && !isSubmitting) {
+        setIsSubmitting(true);
       emailjs.send(
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
@@ -50,12 +52,14 @@ export default function ContactForm() {
         setNotification({ message: 'Email envoyé avec succès!', type: 'success' });
         setFormData(initialFormData); // Réinitialiser le formulaire après succès
         setCaptchaValid(false); // Réinitialiser également l'état du captcha
+        setIsSubmitting(false); // Réinitialiser l'envoi
       })
       .catch((err) => {
         console.log('FAILED...', err);
         setNotification({ message: 'Erreur lors de l\'envoi de l\'email.', type: 'error' });
+        setIsSubmitting(false);
       });
-    } else {
+    } else if (!captchaValid) {
       setNotification({ message: 'Captcha non validé.', type: 'error' });
     }
   };
@@ -112,9 +116,11 @@ export default function ContactForm() {
           <button
             type="submit"
             className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            disabled={isSubmitting}
           >
             Envoyer
           </button>
+          {isSubmitting && <p className="text-center mt-2 text-sm italic text-teal-300">Message en cours d'envoi...</p>} // Afficher un message pendant l'envoi
         </div>
       </form>
       {notification && (
