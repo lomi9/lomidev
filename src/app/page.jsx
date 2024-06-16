@@ -16,10 +16,10 @@ const Homepage = () => {
     <section className="homePage-presentation bg-transparent max-w-[1700px] flex flex-wrap justify-center w-full">
       <Presentation/>
     </section>
-    <section className="homePage-sentance bg-transparen max-w-[1700px] flex flex-wrap justify-center w-full">
+    <section className="hidden homePage-sentance bg-transparen max-w-[1700px] flex-wrap justify-center w-full">
       <Sentance/>
     </section>
-    <section className="homePage-links bg-transparen max-w-[1700px] flex flex-wrap justify-center w-full">
+    <section className="hidden homePage-links bg-transparen max-w-[1700px] flex-wrap justify-center w-full">
       <LinksSection/>
     </section>
     <section className="homePage-WhyUs bg-transparen max-w-[1700px] flex flex-wrap justify-center w-full">
