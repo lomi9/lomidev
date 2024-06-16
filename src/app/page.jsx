@@ -22,7 +22,7 @@ const Homepage = () => {
     <section className="hidden homePage-links bg-transparen max-w-[1700px] flex-wrap justify-center w-full">
       <LinksSection/>
     </section>
-    <section className="homePage-WhyUs bg-transparen max-w-[1700px] flex flex-wrap justify-center w-full">
+    <section className="homePage-WhyUs pt-20 bg-transparen max-w-[1700px] flex flex-wrap justify-center w-full">
       <WhyUs/>
     </section>
 </>
