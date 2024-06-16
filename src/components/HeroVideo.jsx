@@ -7,27 +7,29 @@ import { ChevronRight } from 'lucide-react';
 
 const HeroVideo = () => {
 
+        const { theme } = useTheme();
+
         // Définition des sources de base pour les vidéos
         const lightVideoBase = "/hero_videos/hero_video";
         const darkVideoBase = "/hero_videos/night_sky";
         const lightPosterBase = "/hero_videos/public/poster_video_light";
         const darkPosterBase = "/hero_videos/public/poster_video_dark";
     
-        const { theme } = useTheme();
+
         const [imageSource, setImageSource] = useState('/illustration_ia_colore_light.webp');
         const [videoBase, setVideoBase] = useState(lightVideoBase);
-        const [posterBase, setPosterBase] = useState(lightPosterBase);
+        const [posterBase, setPosterBase] = useState(lightPosterBase + '_720p.webp');
+
     
         useEffect(() => {
-            // Mise à jour de l'image en fonction du thème
-            setImageSource(theme === 'light' ? '/illustration_ia_colore_light.webp' : '/ilustration_n_et_b.webp');
-            // Mise à jour de la base de la vidéo en fonction du thème
             if (theme === 'light') {
                 setVideoBase(lightVideoBase);
-                setPosterBase(lightPosterBase);
+                setPosterBase(lightPosterBase + '_720p.webp');
+                setImageSource('/illustration_ia_colore_light.webp');
             } else {
                 setVideoBase(darkVideoBase);
-                setPosterBase(darkPosterBase);
+                setPosterBase(darkPosterBase + '_720p.webp');
+                setImageSource('/ilustration_n_et_b.webp');
             }
         }, [theme]);
     
@@ -36,13 +38,14 @@ const HeroVideo = () => {
         <div className='relative w-full h-full overflow-visible'>
         <div className="heroVideoContainer relative w-full h-[40vh] sm:h-[50vh] overflow-hidden rounded-3xl shadow-lg border border-solid border-darkercolor/20">
         <video 
-            key={videoBase}
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            className="heroVideo w-full h-full object-cover">
-            poster={`${posterBase}_720p.webp`}
+                    key={videoBase}
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline 
+                    className="heroVideo w-full h-full object-cover"
+                    poster={posterBase}
+                >
                     <source src={`${videoBase}_360p.mp4`} type="video/mp4" media="all and (max-width: 599px)" />
                     <source src={`${videoBase}_720p.mp4`} type="video/mp4" media="all and (min-width: 600px) and (max-width: 1023px)" />
                     <source src={`${videoBase}.mp4`} type="video/mp4" media="all and (min-width: 1024px)" />
