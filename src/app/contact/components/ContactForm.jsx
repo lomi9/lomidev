@@ -120,7 +120,7 @@ export default function ContactForm() {
           >
             Envoyer
           </button>
-          {isSubmitting && <p className="text-center mt-2 text-sm italic text-teal-300">Message en cours d'envoi...</p>} // Afficher un message pendant l'envoi
+          {isSubmitting && <p className="text-center mt-2 text-sm italic text-teal-300">Message en cours d&#39;envoi...</p>} 
         </div>
       </form>
       {notification && (
