@@ -1,15 +1,12 @@
-"use client"
-
+"use client";
 import Script from 'next/script';
 import { useEffect } from 'react';
 
 const AxeptioConsent = ({ clientId }) => {
   useEffect(() => {
-    const checkAxeptioSDK = () => {
-      if (window.axeptioSDK && typeof window.axeptioSDK.init === 'function') {
+    const initAxeptioSDK = () => {
+      if (window.axeptioSDK) {
         window.axeptioSDK.init();
-      } else {
-        setTimeout(checkAxeptioSDK, 100); // Check every 100ms
       }
     };
 
@@ -21,13 +18,12 @@ const AxeptioConsent = ({ clientId }) => {
       authorizedVendorsCookieName: "axeptio_authorized_vendors",
       jsonCookieName: "axeptio_cookies",
       apiUrl: "https://api.axept.io/v1"
-
     };
 
-    checkAxeptioSDK();
+    document.addEventListener('axeptioSDKReady', initAxeptioSDK);
 
     return () => {
-      // Cleanup if needed when the component unmounts
+      document.removeEventListener('axeptioSDKReady', initAxeptioSDK);
     };
   }, [clientId]);
 
@@ -36,6 +32,7 @@ const AxeptioConsent = ({ clientId }) => {
       strategy="afterInteractive"
       src="https://static.axept.io/sdk-slim.js"
       onLoad={() => console.log("Axeptio SDK loaded successfully")}
+      onError={(e) => console.error("Failed to load Axeptio SDK", e)}
     />
   );
 };

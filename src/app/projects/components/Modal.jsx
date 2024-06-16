@@ -35,7 +35,7 @@ const Modal = ({ product, onClose }) => {
               <X />
             </button>
           </div>
-          <div className="modal-content max-h-[70vh] overflow-y-scroll flex flex-wrap w-full">
+          <div className="modal-content pb-20 max-h-[70vh] overflow-y-scroll flex flex-wrap w-full">
             <div className="modal-carousel-container w-full md:w-[50%] ">
               <ImageCarousel images={product.images}/> 
             </div>
