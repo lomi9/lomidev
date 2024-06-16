@@ -112,15 +112,15 @@ export default function ContactForm() {
             onChange={handleCaptchaChange}
           />
         </div>
-        <div className='w-full flex justify-center items-center py-6'>
+        <div className='w-full flex flex-wrap justify-center items-center py-6'>
           <button
             type="submit"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white ${isSubmitting ? 'bg-cyan-700' : 'bg-cyan-600 hover:bg-cyan-700'} bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white ${isSubmitting ? 'bg-cyan-700' : 'bg-cyan-600 hover:bg-cyan-700'} bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
             disabled={isSubmitting}
           >
             Envoyer
           </button>
-          {isSubmitting && <p className="text-centerb w-full mt-2 text-sm italic text-teal-300">Message en cours d&#39;envoi...</p>} 
+          {isSubmitting && <p className="text-center w-full mt-2 text-sm italic text-teal-400 justify-center">Message en cours d&#39;envoi...</p>} 
         </div>
       </form>
       {notification && (
