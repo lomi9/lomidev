@@ -6,26 +6,48 @@ import { ChevronRight } from 'lucide-react';
 
 
 const HeroVideo = () => {
-    const lightVideoSource = "/hero_video.mp4";
-    const darkVideoSource = "/night_sky.mp4";
-    const { theme } = useTheme();
 
-    const [imageSource, setImageSource] = useState('/illustration_ia_colore_light.webp');
-    const [videoSource, setVideoSource] = useState(lightVideoSource);
-
-    useEffect(() => {
-        setImageSource(theme === 'light' ? '/illustration_ia_colore_light.webp' : '/ilustration_n_et_b.webp');
-        setVideoSource(theme === 'light' ? lightVideoSource : darkVideoSource);
-    }, [theme]);
-
+        // Définition des sources de base pour les vidéos
+        const lightVideoBase = "/hero_videos/hero_video";
+        const darkVideoBase = "/hero_videos/night_sky";
+        const lightPosterBase = "/hero_videos/public/poster_video_light";
+        const darkPosterBase = "/hero_videos/public/poster_video_dark";
+    
+        const { theme } = useTheme();
+        const [imageSource, setImageSource] = useState('/illustration_ia_colore_light.webp');
+        const [videoBase, setVideoBase] = useState(lightVideoBase);
+        const [posterBase, setPosterBase] = useState(lightPosterBase);
+    
+        useEffect(() => {
+            // Mise à jour de l'image en fonction du thème
+            setImageSource(theme === 'light' ? '/illustration_ia_colore_light.webp' : '/ilustration_n_et_b.webp');
+            // Mise à jour de la base de la vidéo en fonction du thème
+            if (theme === 'light') {
+                setVideoBase(lightVideoBase);
+                setPosterBase(lightPosterBase);
+            } else {
+                setVideoBase(darkVideoBase);
+                setPosterBase(darkPosterBase);
+            }
+        }, [theme]);
+    
 
     return (
         <div className='relative w-full h-full overflow-visible'>
         <div className="heroVideoContainer relative w-full h-[40vh] sm:h-[50vh] overflow-hidden rounded-3xl shadow-lg border border-solid border-darkercolor/20">
-            <video key={videoSource} autoPlay loop muted playsInline className="heroVideo w-full h-full object-cover">
-                <source src={videoSource} type="video/mp4" />
-                Votre navigateur ne supporte pas les vidéos.
-            </video>
+        <video 
+            key={videoBase}
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="heroVideo w-full h-full object-cover">
+            poster={`${posterBase}_720p.webp`}
+                    <source src={`${videoBase}_360p.mp4`} type="video/mp4" media="all and (max-width: 599px)" />
+                    <source src={`${videoBase}_720p.mp4`} type="video/mp4" media="all and (min-width: 600px) and (max-width: 1023px)" />
+                    <source src={`${videoBase}.mp4`} type="video/mp4" media="all and (min-width: 1024px)" />
+                    Votre navigateur ne supporte pas les vidéos.
+                </video>
             
             <div className={` filter absolute top-0 left-0 w-full h-full ${theme === 'dark' ? 'bg-black opacity-[20%]' : 'bg-white opacity-[55%]'}`}>
                
