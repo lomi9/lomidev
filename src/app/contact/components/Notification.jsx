@@ -10,7 +10,7 @@ function Notification({ message, type, onClose }) {
   }, [onClose]);
 
   return (
-    <div className={`fixed bottom-4 right-4 bg-white text-black p-4 rounded-lg shadow-lg flex items-center space-x-4 ${type === 'success' ? 'border-l-4 border-green-500' : 'border-l-4 border-red-500'}`}>
+    <div className={`fixed bottom-20 right-4 bg-white text-black p-4 rounded-lg shadow-lg flex items-center space-x-4 ${type === 'success' ? 'border-l-4 border-green-500' : 'border-l-4 border-red-500'}`}>
       <span>{message}</span>
       <button onClick={onClose} className="text-xl leading-none hover:text-red-500">&times;</button>
     </div>
