@@ -8,7 +8,7 @@ export default function ContactDetails() {
     const typeform = "https://8yjdazjfoda.typeform.com/to/LNX3zQRj";
 
     return (
-        <div className="devis-card w-[25em] h-[30em] mx-0 md:mx-auto mt-10 py-6 lg:p-6 bg-background/30 rounded-lg shadow-md border border-solid border-cardbordercolor flex flex-wrap content-between justify-center">
+        <div className="devis-card w-[25em] max-w-[100%] h-[30em] mx-0 md:mx-auto mt-10 py-6 lg:p-6 bg-background/30 rounded-lg shadow-md border border-solid border-cardbordercolor flex flex-wrap content-between justify-center">
             <div className='flex flex-wrap items-center justify-start mb-6'>
                 <h2 className="flex w-full flex-wrap items-center justify-center md:text-xl lg:text-2xl font-bold text-foreground">
                     Demande de devis

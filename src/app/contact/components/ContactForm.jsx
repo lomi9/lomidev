@@ -6,6 +6,7 @@ import Input from './Input';
 import { Label } from './Label';
 import Notification from './Notification';
 import Textarea from './Texterea';
+import { ArrowDown } from 'lucide-react';
 
 export default function ContactForm() {
   const initialFormData = {
@@ -60,11 +61,12 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-[25em] mx-auto mt-10 p-6 bg-background/30 rounded-lg shadow-md border border-cardbordercolor">
+    <div className="w-[25em] max-w-[100%] mx-auto mt-10 p-6 bg-background/30 rounded-lg shadow-md border border-cardbordercolor">
       <div className='flex flex-wrap w-full items-center justify-center mb-8'>
-        <h2 className="flex items-center md:text-xl lg:text-2xl font-bold text-gray-900">
+        <h2 className="flex pr-4 items-center md:text-xl lg:text-2xl font-bold text-gray-900">
           Contact rapide ici
         </h2>
+        <ArrowDown/>
       </div>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">

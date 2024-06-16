@@ -12,7 +12,7 @@ const ContactPage = () => {
             <div className="w-full flex flex-wrap justify-center pl-6">
                 <ContactTitle/>
             </div>
-            <div className="w-full flex flex-wrap flex-col md:flex-row justify-center">
+            <div className="w-full flex flex-wrap flex-col md:flex-row justify-center items-center md:items-start px-2">
                 <ContactDetails/>
                 <ContactForm/>
             </div>
