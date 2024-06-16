@@ -67,7 +67,7 @@ export default function ContactForm() {
   return (
     <div className="w-[25em] max-w-[100%] mx-auto mt-10 p-6 bg-background/30 rounded-lg shadow-md border border-cardbordercolor">
       <div className='flex flex-wrap w-full items-center justify-center mb-8'>
-        <h2 className="flex pr-4 items-center md:text-xl lg:text-2xl font-bold text-gray-900">
+        <h2 className="flex pr-4 items-center md:text-xl lg:text-2xl font-bold text-foreground">
           Contact rapide ici
         </h2>
         <ArrowDown/>
