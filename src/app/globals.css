@@ -132,6 +132,19 @@ body {
   width: 100%;
 }
 
+.modal-screen-background {
+  pointer-events: none; /* Empêche la superposition de capturer les événements de souris et de toucher */
+}
+
+.modal-screen-position {
+  pointer-events: auto; /* Assure que les interactions sont capturées sur la modale elle-même */
+}
+
+.modal-content {
+  -webkit-overflow-scrolling: touch; /* Améliore le défilement fluide sur iOS */
+  overflow-y: auto; /* S'assurer que le défilement est activé */
+}
+
 .card-radial-gradient {
   opacity: 0.5;
   background-image: radial-gradient(circle at center center, #e5ebe4, #f0efec),
