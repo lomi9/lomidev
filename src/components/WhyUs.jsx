@@ -32,7 +32,7 @@ const swipePower = (offset, velocity) => {
 const WhyUs = () => {
   const [[page, direction], setPage] = useState([0, 0]);
   const items = [
-    { icon: <CreditCard className="h-16 " />, title: 'Paiement en 2 ou 3 fois', description: 'Profitez d\'un paiement échelonnée pour plus de flexibilité.' },
+    { icon: <CreditCard className="h-16 " />, title: 'Paiement en 2 ou 3 fois', description: 'Profitez d\'un paiement échelonné pour plus de flexibilité.' },
     { icon: <Lock className="h-16 " />, title: 'Propriété', description: 'Vous êtes propriétaire de votre site web, quelle que soit l\'option choisie.' },
     { icon: <Headphones className="h-16 " />, title: 'Support continue', description: 'Je suis disponible à tout moment pour vous aider en cas de besoin.' },
     { icon: <Star className="h-16 " />, title: 'Prestations de Qualité', description: 'Tous les services proposés sont garantis de qualité, avec une assurance de bon fonctionnement.' }

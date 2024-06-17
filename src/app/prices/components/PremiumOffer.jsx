@@ -89,11 +89,11 @@ export default function PremiumOffer() {
         </li>
     <li className="w-full flex text-base gap-2 pb-4 items-start">
         <Paintbrush className="icon-small text-blue-300 mt-[4px]"/>
-        <p className=" w-auto flex flex-wrap items-center justify-start">Possibilité infinie de designs uniques</p>
+        <p className=" w-auto flex flex-wrap items-center justify-start">Possibilités de designs uniques et modernes</p>
         </li>
     <li className="w-full flex text-base gap-2 pb-4 items-center">
         <PiggyBank className="icon-small text-blue-300 "/>
-        <p className=" w-auto flex flex-wrap items-center justify-start">Économique dans le temps</p>
+        <p className=" w-auto flex flex-wrap items-center justify-start">Économique sur le long terme</p>
         </li>
 
 </ul>
