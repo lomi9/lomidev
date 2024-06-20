@@ -5,9 +5,10 @@ const Mentions = () => {
     return (
 
         <main className="flex flex-wrap mt-[12rem] px-12 max-w-[1000px]">
-            <h1 className="text-2xl font-bold pb-8">
+            <h1 className="text-2xl w-full font-bold pb-8">
                 Mentions Légales
             </h1>
+            <p className="w-full text-sm italic">Dernière mise à jour : 20/06/2024</p>
 
             <article className="py-8">
                 <h2 className="text-xl font-bold py-4">Définitions</h2>

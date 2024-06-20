@@ -54,7 +54,7 @@ const Footer = () => {
                             <div className="w-full flex justify-center items-center space-x-6  mt-4 sm:mt-6">
                                 <Link href="/mentions" className="hover:text-gray-400 text-xs flex flex-wrap justify-center items-center">Mentions légales</Link>
                                 <p>-</p>
-                                <a href="#" className="hover:text-gray-400 text-xs flex flex-wrap justify-center items-center">Conditions générales de vente</a>
+                                <Link href="/cgv" className="hover:text-gray-400 text-xs flex flex-wrap justify-center items-center">CGV</Link>
                             </div>
                     </div>
                 </div>
