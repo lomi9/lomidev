@@ -31,7 +31,7 @@ const Cgv = () => {
                         <li>30% à la commande, 30% à la validation de la maquette et 40% à la livraison du projet.</li>
                 </ul>
                 <p className="text-sm">
-                Les paiements peuvent être effectués par virement bancaire ou via Stripe. Les détails de paiement seront fournis dans la proposition commerciale. Le site ne sera pas mis en ligne tant que le paiement total n'aura pas été effectué.
+                Les paiements peuvent être effectués par virement bancaire ou via Stripe. Les détails de paiement seront fournis dans la proposition commerciale. Le site ne sera pas mis en ligne tant que le paiement total n&#39;aura pas été effectué.
                 </p>
 
             </article>
@@ -40,27 +40,27 @@ const Cgv = () => {
             <article className="py-8">
                 <h2 className="text-xl font-bold py-4">3. Livraison et Délais.</h2>
                 <p className="text-sm">
-                Les délais de livraison sont variables et seront déterminés en fonction des exigences spécifiques de chaque projet. Aucun engagement ferme de date de livraison n'est pris, en raison des délais variables induits par les révisions ou modifications requises par le client. La mise en ligne du site web est effectuée à réception du dernier paiement, sur l'hébergeur choisi par le client.
+                Les délais de livraison sont variables et seront déterminés en fonction des exigences spécifiques de chaque projet. Aucun engagement ferme de date de livraison n&#39;est pris, en raison des délais variables induits par les révisions ou modifications requises par le client. La mise en ligne du site web est effectuée à réception du dernier paiement, sur l&#39;hébergeur choisi par le client.
                 </p>
             </article>
 
             <article className="py-8">
                 <h2 className="text-xl font-bold py-4">4. Révisions et Approbations.</h2>
                 <p className="text-sm">
-                Le service inclut jusqu'à trois révisions ou modifications par projet avant la livraison finale. Toute demande supplémentaire de révision peut entraîner des frais additionnels qui seront discutés et convenus avec le client.</p>
+                Le service inclut jusqu&#39;à trois révisions ou modifications par projet avant la livraison finale. Toute demande supplémentaire de révision peut entraîner des frais additionnels qui seront discutés et convenus avec le client.</p>
             </article>
 
             <article className="py-8">
                 <h2 className="text-xl font-bold py-4">5. Annulation du Projet.</h2>
                 <p className="text-sm">
-                En cas d'annulation du projet par le client, les travaux déjà accomplis peuvent être réutilisés ou détruits à notre discrétion, et aucun remboursement ne sera effectué pour les sommes déjà versées.
+                En cas d&#39;annulation du projet par le client, les travaux déjà accomplis peuvent être réutilisés ou détruits à notre discrétion, et aucun remboursement ne sera effectué pour les sommes déjà versées.
                 </p>
             </article>
 
             <article className="py-8">
                 <h2 className="text-xl font-bold py-4">6. Droits de Propriété Intellectuelle.</h2>
                 <p className="text-sm">
-                Les droits de propriété intellectuelle seront spécifiés individuellement pour chaque projet, en fonction des arrangements pris avec le client (cession des droits, licence d'utilisation, etc.).
+                Les droits de propriété intellectuelle seront spécifiés individuellement pour chaque projet, en fonction des arrangements pris avec le client (cession des droits, licence d&#39;utilisation, etc.).
                 </p>
             </article>
 
@@ -68,7 +68,7 @@ const Cgv = () => {
 
                 <h2 className="text-xl font-bold py-4">7. Clause de Confidentialité.</h2>
                 <p className="text-sm">
-                Lomi Dev s'engage à garder confidentielles toutes les informations fournies par le client et à les stocker de manière sécurisée. Aucune information ne sera partagée avec des tiers sans le consentement explicite du client.
+                Lomi Dev s&#39;engage à garder confidentielles toutes les informations fournies par le client et à les stocker de manière sécurisée. Aucune information ne sera partagée avec des tiers sans le consentement explicite du client.
                 </p>
 
             </article>
@@ -76,14 +76,14 @@ const Cgv = () => {
             <article className="py-8">
             <h2 className="text-base font-bold py-4"> 8. Limitation de Responsabilités.</h2>
                 <p className="text-sm">
-                Lomi Dev ne peut être tenu pour responsable des dommages indirects ou consécutifs pouvant survenir de l'utilisation ou de l'incapacité à utiliser le site web livré. Notre responsabilité se limite strictement à la correction des défauts conformément aux spécifications du projet validé.
+                Lomi Dev ne peut être tenu pour responsable des dommages indirects ou consécutifs pouvant survenir de l&#39;utilisation ou de l&#39;incapacité à utiliser le site web livré. Notre responsabilité se limite strictement à la correction des défauts conformément aux spécifications du projet validé.
                 </p>
             </article>
 
             <article className="py-8">
             <h2 className="text-base font-bold py-4"> 9.  RGPD et Protection des Données.</h2>
                 <div className="text-sm">
-                <p>Pour plus d'informations sur la gestion des données personnelles, veuillez consulter les </p> <Link href="/mentions" className="italic underline hover:text-gray-500">mentions légales.</Link>
+                <p>Pour plus d&#39;informations sur la gestion des données personnelles, veuillez consulter les </p> <Link href="/mentions" className="italic underline hover:text-gray-500">mentions légales.</Link>
                 </div>
 
             </article>
@@ -91,13 +91,13 @@ const Cgv = () => {
             <article className="py-8">
                 <h2 className="text-xl font-bold py-4">10.  Sous-traitance.</h2>
                 <p className="text-sm">
-                Lomi Dev se réserve le droit de faire appel à des sous-traitants pour certaines parties du projet (graphismes, parties juridiques...). Lomi Dev agira en tant qu'intermédiaire avec l'accord du client, en veillant à ce que la qualité et les conditions du projet soient respectées.</p>
+                Lomi Dev se réserve le droit de faire appel à des sous-traitants pour certaines parties du projet (graphismes, parties juridiques...). Lomi Dev agira en tant qu&#39;intermédiaire avec l&#39;accord du client, en veillant à ce que la qualité et les conditions du projet soient respectées.</p>
             </article>
 
             <article className="py-8">
                 <h2 className="text-xl font-bold py-4">11.  Gestion des Litiges.</h2>
                 <p className="text-sm">
-                En cas de litige, les parties s'efforceront de trouver une solution amiable. Faute d'accord, les litiges seront soumis aux tribunaux compétents selon la loi applicable.
+                En cas de litige, les parties s&#39;efforceront de trouver une solution amiable. Faute d&#39;accord, les litiges seront soumis aux tribunaux compétents selon la loi applicable.
 
                 </p>
             </article>
