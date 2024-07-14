@@ -27,7 +27,7 @@ const Footer = () => {
                     <div className=" w-full container flex justify-center flex-wrap mx-auto text-center">
                         <div className="flex mb-4 sm:mb-10 flex-wrap items-center bg-secondary/40 rounded-lg border-gray-200 px-4 py-2">
                             <BadgeCheck className=" w-[1rem] text-green-300"/>
-                            <p className="font-kanit text-xs pl-2"> Délai actuel de prise en charge : 2 semaines </p>
+                            <p className="font-kanit text-xs pl-2"> Délai actuel de prise en charge : 4 semaines </p>
                         </div>
                         <div className="w-full flex justify-center items-center space-x-6">
             <div
@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
               )}
             </div>
-            <a href="tel:+123456789" className="hover:text-gray-400 flex flex-wrap justify-center items-center">
+            <a href="tel:+33749470132" className="hover:text-gray-400 flex flex-wrap justify-center items-center">
               <Phone />
             </a>
             <a href="mailto:contact@lomi-dev.com" className="hover:text-gray-400 flex flex-wrap justify-center items-center">
