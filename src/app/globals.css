@@ -111,19 +111,30 @@ body {
 }
 
 .light-point {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background: radial-gradient(
     circle,
-    #e2e0de 40%,
+    40%,
     rgba(226, 224, 222, 0.5) 70%,
     transparent 100%
   );
   border-radius: 50%;
   position: fixed;
-  bottom: -20px;
-  right: -20px;
+  bottom: -60px;
+  right: -60px;
   filter: blur(10px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .light-point {
+    background: radial-gradient(
+      circle,
+      40%,
+      rgba(10, 15, 61, 0.5) 70%,
+      transparent 100%
+    );
+  }
 }
 
 .no-scroll {
