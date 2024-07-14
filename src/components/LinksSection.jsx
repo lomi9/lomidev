@@ -25,13 +25,13 @@ const LinksSection = () => {
         <div className=" relative w-auto px-8 gap-4 flex flex-wrap border border-solid border-transparent justify-center flex-col">
         
 
-        <div class="blob-container absolute w-full h-full top-0 left-0 z-10">
+        <div className="blob-container absolute w-full h-full top-0 left-0 z-10">
             <div className="relative w-full h-full">
-                        <div class="blob blob1 bg-orange-200 dark:bg-blue-950 absolute top-0 left-0"></div>
-                        <div class="blob blob2 bg-green-200 dark:bg-teal-950 absolute top-[-40px] right-0"></div>
-                        <div class="blob blob4 bg-cyan-200 dark:bg-green-950 absolute top-1/3 left-1/4"></div>
-                        <div class="blob blob3 bg-teal-200 dark:bg-green-950 absolute bottom-[-30px] left-0"></div>
-                        <div class="blob blob5 bg-pink-100 dark:bg-blue-950 absolute bottom-[-10px] right-[-10px]"></div>
+                        <div className="blob blob1 bg-orange-200 dark:bg-blue-950 absolute top-0 left-0"></div>
+                        <div className="blob blob2 bg-green-200 dark:bg-teal-950 absolute top-[-40px] right-0"></div>
+                        <div className="blob blob4 bg-cyan-200 dark:bg-green-950 absolute top-1/3 left-1/4"></div>
+                        <div className="blob blob3 bg-teal-200 dark:bg-green-950 absolute bottom-[-30px] left-0"></div>
+                        <div className="blob blob5 bg-pink-100 dark:bg-blue-950 absolute bottom-[-10px] right-[-10px]"></div>
                         </div>
         </div>
 
